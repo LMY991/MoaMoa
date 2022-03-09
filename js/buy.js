@@ -15,7 +15,6 @@ function BuyProc(){
 	this.inname_obj = '.inname_obj'; 
 	this.indate_obj = '.indate_obj'; 
 
-	// 鍮꾪븘�� �좏깮��
 	this.point1_discount_obj = '.point1_discount_obj';
 	this.total_discount_obj = '.total_discount_obj'; 
 	this.is_th_del_obj = '.is_th_del_obj'; 
