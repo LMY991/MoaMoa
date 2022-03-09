@@ -28,6 +28,7 @@
         <link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
         <link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinFlat.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
         <link rel="stylesheet" type="text/css" href="css/custom.css">
         <link rel="stylesheet" type="text/css" href="css/board.css">
         <link rel="stylesheet" type="text/css" href="css/review.css">
@@ -272,152 +273,144 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- 서브페이지 타이틀 텍스트 (일반) -->
-                    <h2 class="subtitle" style="padding-top:100px !important">LOGIN</h2>
-                    <div>
-                        <a
-                            href="javascript:;"
-                            style="color:#a0a0a0;
-                    text-decoration: underline;font-size: 14px;"
-                            onclick="open_layer('login_popup')">
-                            간편가입으로 15가지 회원혜택을 누려보세요 ></a>
-                    </div>
-                    <!-- 서브페이지 타이틀 텍스트 (일반) -->
-                    <div style="text-align:center;padding-top:20px;">
-                        <a href="javascript:;" onclick="kakao_login_call()">
-                            <img
-                                src="https://atimg.sonyunara.com/attrangs/banner/kakao-renew-pc2.png"
-                                style="margin-bottom: 26px;"/>
-                        </a>
-                    </div>
-                    <div class="cntbody">
-                        <div id="login" class="box_member">
-                            <div class="form_login form_box">
-                                <!-- 회원로그인폼 -->
-                                <form
-                                    name="loginform"
-                                    method="post"
-                                    action="/member/loginpro.php"
-                                    onsubmit=" MemberProc.loginDataCheck();">
-                                    <input type="hidden" name='url' value='/'/>
-
-                                    <fieldset>
-                                        <legend>회원로그인</legend>
-                                        <div class="fld">
-                                            <label>아이디</label>
-                                            <input
-                                                type="text"
-                                                name="id"
-                                                value=""
-                                                class="form_input member"
-                                                placeholder="아이디"
-                                                autocomplete="off">
-                                        </div>
-                                        <div class="fld">
-                                            <label>비밀번호</label>
-                                            <input
-                                                type="password"
-                                                name="passwd"
-                                                value=""
-                                                class="form_input member"
-                                                placeholder="비밀번호"
-                                                autocomplete="off">
-                                        </div>
-                                        <div class="fld">
-                                            <input type="checkbox" name="saveid" value="Y" class="member">
-                                            <label
-                                                style="display: inline-block; vertical-align: middle; margin-right: 4px; margin-bottom: 1px;">아이디 저장</label>
-                                            <input
-                                                type="checkbox"
-                                                name="autoLogin"
-                                                value="1"
-                                                class="member"
-                                                style="margin-right: 4px;">
-                                            <label
-                                                style="display: inline-block; vertical-align: middle; margin-right: 4px; margin-bottom: 1px;">자동로그인</label>
-                                        </div>
-                                        <span class="memberbtn"><input type="submit" value="로그인"></span>
-                                    </fieldset>
-                                    <ul class="find_remove">
-                                        <li>
-                                            <a href="/member/search_id_pw.php">아이디/비밀번호 찾기</a>
-                                        </li>
-                                        <li>
-                                            <a href="/member/dormant.php">휴면해제</a>
-                                        </li>
-                                        <li>
-                                            <a href="/member/join_step1.php">회원가입</a>
-                                        </li>
-                                    </ul>
-
-                                </form>
-                                <div style="overflow:hidden; margin-top:40px;">
-                                    <div style="float:left; font-weight:600; font-size:14px">
-                                        간편하게<br>시작하기
-                                    </div>
-                                    <ul class="sns_login">
-                                        <li class="kakao">
-                                            <a href="javascript:;" onclick="kakao_login_call()">
-                                                카카오
-                                                <span id="kakao-login-btn" style='display: none;'></span>
-                                                <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-                                                <script type='text/javascript'></script>
-                                                <!-- 회원로그인폼 -->
-                                            </div>
-                                            <div class="form_nomember form_box">
-                                                <!-- 비회원주문조회폼 -->
-                                                <form
-                                                    name="orderform"
-                                                    method="post"
-                                                    action="/member/order_view.php"
-                                                    onsubmit=" order_view();"
+                        <!-- 서브페이지 타이틀 텍스트 (일반) -->
+                        <h2 class="subtitle" style="padding-top:100px !important">LOGIN</h2>
+                        <!-- 서브페이지 타이틀 텍스트 (일반) -->
+                        <div style="text-align:center;padding-top:20px;">
+                            <a href="javascript:;" onclick="kakao_login_call()">
+                                <img
+                                    src="https://atimg.sonyunara.com/attrangs/banner/kakao-renew-pc2.png"
+                                    style="margin-bottom: 26px;"/>
+                            </a>
+                        </div>
+                        <div class="cntbody">
+                            <div id="login" class="box_member">
+                                <div class="form_login form_box">
+                                    <!-- 회원로그인폼 -->
+                                    <form
+                                        name="loginform"
+                                        method="post"
+                                        action="/member/loginpro.php"
+                                        onsubmit=" MemberProc.loginDataCheck();">
+                                        <input type="hidden" name='url' value='/'/>
+    
+                                        <fieldset>
+                                            <legend>회원로그인</legend>
+                                            <div class="fld">
+                                                <label>아이디</label>
+                                                <input
+                                                    type="text"
+                                                    name="id"
+                                                    value=""
+                                                    class="form_input member"
+                                                    placeholder="아이디"
                                                     autocomplete="off">
-                                                    <fieldset>
-                                                        <legend>비회원 주문조회</legend>
-                                                        <div class="fld">
-                                                            <label>이름</label>
-                                                            <input
-                                                                type="text"
-                                                                name="ordername"
-                                                                value=""
-                                                                class="form_input member"
-                                                                placeholder="이름"
-                                                                autocomplete='new-password'>
-                                                        </div>
-                                                        <div class="fld">
-                                                            <label>주문번호</label>
-                                                            <input
-                                                                type="text"
-                                                                name="orderno"
-                                                                value=""
-                                                                class="form_input member"
-                                                                placeholder="주문번호"
-                                                                autocomplete='new-password'>
-                                                        </div>
-                                                        <div class="fld">
-                                                            <label>비밀번호</label>
-                                                            <input
-                                                                type="password"
-                                                                name="passwd"
-                                                                id="nomember_passwd"
-                                                                value=""
-                                                                class="form_input member"
-                                                                placeholder="비밀번호"
-                                                                autocomplete='new-password'>
-                                                        </div>
-                                                        <span class="memberbtn"><input type="submit" value="주문조회"></span>
-                                                        <a href="/member/findOrderNum.php">
-                                                            <span class="memberbtn white"><input type="button" value="주문번호/비밀번호 찾기"></span>
-                                                        </a>
-                                                    </fieldset>
-                                                </form>
-                                                <!-- sns로그인 -->
-                                                <!-- //sns로그인 -->
-                                                <!-- //비회원주문조회폼 -->
+                                            </div>
+                                            <div class="fld">
+                                                <label>비밀번호</label>
+                                                <input
+                                                    type="password"
+                                                    name="passwd"
+                                                    value=""
+                                                    class="form_input member"
+                                                    placeholder="비밀번호"
+                                                    autocomplete="off">
+                                            </div>
+                                            <div class="fld">
+                                                <input type="checkbox" name="saveid" value="Y" class="member">
+                                                <label
+                                                    style="display: inline-block; vertical-align: middle; margin-right: 4px; margin-bottom: 1px;">아이디 저장</label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="autoLogin"
+                                                    value="1"
+                                                    class="member"
+                                                    style="margin-right: 4px;">
+                                                <label
+                                                    style="display: inline-block; vertical-align: middle; margin-right: 4px; margin-bottom: 1px;">자동로그인</label>
+                                            </div>
+                                            <span class="memberbtn"><input type="submit" value="로그인"></span>
+                                        </fieldset>
+                                        <ul class="find_remove">
+                                            <li>
+                                                <a href="/member/search_id_pw.php">아이디/비밀번호 찾기</a>
+                                            </li>
+                                            <li>
+                                                <a href="/member/dormant.php">휴면해제</a>
+                                            </li>
+                                            <li>
+                                                <a href="/member/join_step1.php">회원가입</a>
+                                            </li>
+                                        </ul>
+    
+                                    </form>
+                                    <div style="overflow:hidden; margin-top:40px;">
+                                        <div style="float:left; font-weight:600; font-size:14px">
+                                            간편하게<br>시작하기
+                                        </div>
+                                        <ul class="sns_login">
+                                            <li class="kakao">
+                                                <a href="javascript:;" onclick="kakao_login_call()">
+                                                    카카오
+                                                    <span id="kakao-login-btn" style='display: none;'></span>
+                                                    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+                                                    <script type='text/javascript'></script>
+                                                    <!-- 회원로그인폼 -->
+                                                </div>
+                                                <div class="form_nomember form_box">
+                                                    <!-- 비회원주문조회폼 -->
+                                                    <form
+                                                        name="orderform"
+                                                        method="post"
+                                                        action="/member/order_view.php"
+                                                        onsubmit=" order_view();"
+                                                        autocomplete="off">
+                                                        <fieldset>
+                                                            <legend>비회원 주문조회</legend>
+                                                            <div class="fld">
+                                                                <label>이름</label>
+                                                                <input
+                                                                    type="text"
+                                                                    name="ordername"
+                                                                    value=""
+                                                                    class="form_input member"
+                                                                    placeholder="이름"
+                                                                    autocomplete='new-password'>
+                                                            </div>
+                                                            <div class="fld">
+                                                                <label>주문번호</label>
+                                                                <input
+                                                                    type="text"
+                                                                    name="orderno"
+                                                                    value=""
+                                                                    class="form_input member"
+                                                                    placeholder="주문번호"
+                                                                    autocomplete='new-password'>
+                                                            </div>
+                                                            <div class="fld">
+                                                                <label>비밀번호</label>
+                                                                <input
+                                                                    type="password"
+                                                                    name="passwd"
+                                                                    id="nomember_passwd"
+                                                                    value=""
+                                                                    class="form_input member"
+                                                                    placeholder="비밀번호"
+                                                                    autocomplete='new-password'>
+                                                            </div>
+                                                            <span class="memberbtn"><input type="submit" value="주문조회"></span>
+                                                            <a href="/member/findOrderNum.php">
+                                                                <span class="memberbtn white"><input type="button" value="주문번호/비밀번호 찾기"></span>
+                                                            </a>
+                                                        </fieldset>
+                                                    </form>
+                                                    <!-- sns로그인 -->
+                                                    <!-- //sns로그인 -->
+                                                    <!-- //비회원주문조회폼 -->
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                        </div>
                                 </section>
                                 <!-- Sctipt -->
                                 <script src="js/jquery-3.3.1.min.js"></script>
