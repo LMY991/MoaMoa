@@ -8,7 +8,27 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
             rel="stylesheet">
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery.form.min.js"></script>
+        <script type="text/javascript" src="js/clipboard.js"></script>
 
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
+        <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+        <script type="text/javascript" src="js/cookie.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" src="js/goods.js"></script>
+        <script type="text/javascript" src="js/buy.js"></script>
+        <script type="text/javascript" src="js/member.js"></script>
+        <script type="text/javascript" src="js/order.js"></script>
+        <script type="text/javascript" src="js/site.js"></script>
+        <script type="text/javascript" src="js/giftCard.js"></script>
+        <script type="text/javascript" src="js/scm.js"></script>
+        <script type="text/javascript" src="js/review.js"></script>
         <!-- CSS Styles -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -411,84 +431,95 @@
                                 font-size: 12px;
                             }
                         </style>
-                            <form id='kakao_form' action="/api/kakaoSync/loginCheck.php" method='POST'>
-                                <input type="hidden" name='url' value='/'>
-                                <input type="hidden" name='id' id='id'>
-                                <input type="hidden" name='nickname' id='nickname'>
-                                <input type="hidden" name='email' id='email'>
-                                <input type="hidden" name='cp' id='cp'>
-                                <input type="hidden" name='birthyear' id='birthyear'>
-                                <input type="hidden" name='birthday' id='birthday'>
-                            </form>	<div style="text-align:center;padding-top:20px;"><a href="javascript:;" onclick="kakao_login_call()"><img src="https://atimg.sonyunara.com/attrangs/banner/kakao-pc.jpg"  /></a></div>
-                                <!--카카오-->
-                                <!-- 서브페이지 타이틀 텍스트 (일반) -->
-                                <h2 class="subtitle">회원가입</h2>
-                                <!-- 서브페이지 타이틀 텍스트 (일반) -->
-                            
-                                <div class="cntbody">
-                            
-                                    <!-- 회원가입 스텝 -->
-                                    <ol class="join_step">
-                                        <li class="agree active"><span>01</span> 이용약관 동의</li>
-                                        <li class="form"><span>02</span> 회원정보입력</li>
-                                        <li class="finish"><span>03</span> 회원가입 완료</li>
-                                    </ol>
-                                    <!-- //회원가입 스텝 -->
-                            
-                                    <div id="join_agree">
-                                        <!-- 이용약관 -->
-                                        <iframe name="" src="use.html" scrolling="yes" frameborder="0"></iframe>
-                                        <!-- //이용약관 -->
-                                        <p class="check">
-                                            <input type="radio" name="use_agree" id="use_agree" value="Y">
-                                            <label for="use_agree">동의함</label>
-                                            <input type="radio" name="use_agree" id="use_noagree" value="N">
-                                            <label for="use_noagree">동의안함</label>
-                                        </p>
-                                        <!-- 개인정보처리방침 -->
-                                        <iframe name="" src="privacy.html" scrolling="yes" frameborder="0"></iframe>
-                                        <!-- //개인정보처리방침 -->
-                                        <p class="check">
-                                            <input type="radio" name="privacy_agree" id="privacy_agree" value="Y">
-                                            <label for="privacy_agree">동의함</label>
-                                            <input type="radio" name="privacy_agree" id="privacy_noagree" value="N">
-                                            <label for="privacy_noagree">동의안함</label>
-                                        </p>
-                                        <div class="btn tac">
-                                            <span class="box_btn w144 h45 fs15"><a href="javascript:" onclick="agree_chk();">확인</a></span>
-                                        </div>
-                                    </div>
-                            
+                        <form id='kakao_form' action="/api/kakaoSync/loginCheck.php" method='POST'>
+                            <input type="hidden" name='url' value='/'>
+                            <input type="hidden" name='id' id='id'>
+                            <input type="hidden" name='nickname' id='nickname'>
+                            <input type="hidden" name='email' id='email'>
+                            <input type="hidden" name='cp' id='cp'>
+                            <input type="hidden" name='birthyear' id='birthyear'>
+                            <input type="hidden" name='birthday' id='birthday'>
+                        </form>
+                        <div style="text-align:center;padding-top:20px;">
+                            <a href="javascript:;" onclick="kakao_login_call()"><img src="https://atimg.sonyunara.com/attrangs/banner/kakao-pc.jpg"/></a>
+                        </div>
+                        <!--카카오-->
+                        <!-- 서브페이지 타이틀 텍스트 (일반) -->
+                        <h2 class="subtitle">회원가입</h2>
+                        <!-- 서브페이지 타이틀 텍스트 (일반) -->
+
+                        <div class="cntbody">
+
+                            <!-- 회원가입 스텝 -->
+                            <ol class="join_step">
+                                <li class="agree active">
+                                    <span>01</span>
+                                    이용약관 동의</li>
+                                <li class="form">
+                                    <span>02</span>
+                                    회원정보입력</li>
+                                <li class="finish">
+                                    <span>03</span>
+                                    회원가입 완료</li>
+                            </ol>
+                            <!-- //회원가입 스텝 -->
+
+                            <div id="join_agree">
+                                <!-- 이용약관 -->
+                                <iframe name="" src="use.html" scrolling="yes" frameborder="0"></iframe>
+                                <!-- //이용약관 -->
+                                <p class="check">
+                                    <input type="radio" name="use_agree" id="use_agree" value="Y">
+                                    <label for="use_agree">동의함</label>
+                                    <input type="radio" name="use_agree" id="use_noagree" value="N">
+                                    <label for="use_noagree">동의안함</label>
+                                </p>
+                                <!-- 개인정보처리방침 -->
+                                <iframe name="" src="privacy.html" scrolling="yes" frameborder="0"></iframe>
+                                <!-- //개인정보처리방침 -->
+                                <p class="check">
+                                    <input type="radio" name="privacy_agree" id="privacy_agree" value="Y">
+                                    <label for="privacy_agree">동의함</label>
+                                    <input type="radio" name="privacy_agree" id="privacy_noagree" value="N">
+                                    <label for="privacy_noagree">동의안함</label>
+                                </p>
+                                <div class="btn tac">
+                                    <span class="box_btn w144 h45 fs15">
+                                        <a href="javascript:" onclick="agree_chk();">확인</a>
+                                    </span>
                                 </div>
                             </div>
-                    </section>
-                    <!-- Sctipt -->
-                    <script src="js/jquery-3.3.1.min.js"></script>
-                    <script src="js/bootstrap.min.js"></script>
-                    <script src="js/jquery.nice-select.min.js"></script>
-                    <script src="js/jquery-ui.min.js"></script>
-                    <script src="js/jquery.slicknav.js"></script>
-                    <script src="js/mixitup.min.js"></script>
-                    <script src="js/owl.carousel.min.js"></script>
-                    <script src="js/main.js"></script>
-                    <script src="js/jquery-1.11.3.min.js"></script>
-                    <script src="js/jquery-ui.js"></script>
-                    <script src="js/jquery.form.min.js"></script>
-                    <script type="text/javascript" src="js/clipboard.js"></script>
-                    <script type="text/javascript" src="js/swiper.min.js"></script>
-                    <script type="text/javascript" src="js/click.min.js"></script>
-                    <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
-                    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
-                    <script type="text/javascript" src="js/cookie.js"></script>
-                    <script type="text/javascript" src="js/script.js"></script>
-                    <script type="text/javascript" src="js/custom.js"></script>
-                    <script type="text/javascript" src="js/good.js"></script>
-                    <script type="text/javascript" src="js/buy.js"></script>
-                    <script type="text/javascript" src="js/member.js"></script>
-                    <script type="text/javascript" src="js/order.js"></script>
-                    <script type="text/javascript" src="js/site.js"></script>
-                    <script type="text/javascript" src="js/giftCard.js"></script>
-                    <script type="text/javascript" src="js/scm.js"></script>
-                    <script type="text/javascript" src="/js/review.js"></script>
-                </body>
-            </html>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- Sctipt -->
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/jquery.nice-select.min.js"></script>
+                <script src="js/jquery-ui.min.js"></script>
+                <script src="js/jquery.slicknav.js"></script>
+                <script src="js/mixitup.min.js"></script>
+                <script src="js/owl.carousel.min.js"></script>
+                <script src="js/main.js"></script>
+                <script src="js/jquery-1.11.3.min.js"></script>
+                <script src="js/jquery-ui.js"></script>
+                <script src="js/jquery.form.min.js"></script>
+                <script type="text/javascript" src="js/clipboard.js"></script>
+                <script type="text/javascript" src="js/swiper.min.js"></script>
+                <script type="text/javascript" src="js/click.min.js"></script>
+                <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
+                <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+                <script type="text/javascript" src="js/cookie.js"></script>
+                <script type="text/javascript" src="js/script.js"></script>
+                <script type="text/javascript" src="js/custom.js"></script>
+                <script type="text/javascript" src="js/good.js"></script>
+                <script type="text/javascript" src="js/buy.js"></script>
+                <script type="text/javascript" src="js/member.js"></script>
+                <script type="text/javascript" src="js/order.js"></script>
+                <script type="text/javascript" src="js/site.js"></script>
+                <script type="text/javascript" src="js/giftCard.js"></script>
+                <script type="text/javascript" src="js/scm.js"></script>
+                <script type="text/javascript" src="/js/review.js"></script>
+            </body>
+        </html>

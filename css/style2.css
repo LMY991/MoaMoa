@@ -280,42 +280,6 @@ a:hover {
     line-height: 1;
 }
 
-/* input 湲곕낯 �ㅽ��� */
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    overflow: hidden;
-    width: 17px;
-    height: 17px;
-    margin: 0;
-    padding: 0;
-    background: url("/asset/img/common/checkbox.gif") no-repeat center #fff;
-}
-input[type="checkbox"]:checked {
-    background-image: url("/asset/img/common/checkbox_checked.gif");
-}
-input[type="radio"] {
-    -webkit-appearance: none;
-    appearance: none;
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    overflow: hidden;
-    width: 17px;
-    height: 17px;
-    margin: 0;
-    padding: 0;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    background: url("/asset/img/common/radio.png") no-repeat center #fff;
-}
-input[type="radio"]:checked {
-    background-image: url("/asset/img/common/radio_checked.png");
-}
 .form_input {
     height: 34px;
     padding: 4px 10px;
@@ -358,8 +322,30 @@ textarea.form_input {
     height: auto;
 }
 
-/* ���됲듃 */
 select {
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    cursor: default;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 0px;
     max-width: 100%;
     height: 34px;
     padding: 4px 6px;
@@ -373,7 +359,6 @@ select:focus {
     outline: none !important;
 }
 
-/* �쒕툕 �섏씠吏� ���댄� */
 h2.subtitle {
     padding: 80px 0 50px;
     color: #282828;
@@ -382,7 +367,6 @@ h2.subtitle {
     text-align: center;
 }
 
-/* �섏씠吏� �� ���댄� */
 h3.title.first {
     padding-top: 0;
 }
@@ -406,7 +390,6 @@ h3.title > a {
     font-size: 13px;
 }
 
-/* �곹뭹由ъ뒪�� �섎웾,�뺣젹�좏깮 */
 .total_sort {
     clear: both;
     height: 56px;
@@ -448,7 +431,6 @@ h3.title > a {
     font-size: 14px;
 }
 
-/* �섏씠吏� */
 .paging {
     margin-top: 34px;
     font-size: 0;
@@ -729,7 +711,6 @@ h3.title > a {
     margin: 0;
 }
 
-/* �뚯씠釉� �ㅽ��� - 媛�濡� - �뷀뀒�� �ъ꽦�섎쪟�ъ씠利덈��섏감�� */
 .tbl_col.change_chart > thead > tr > th {
     border-left: 1px solid #e5e5e5;
     background: #f7f7f7;
@@ -1028,7 +1009,6 @@ h3.title > a {
     background-image: url("/asset/img/shop/icon_fabric_checked.gif");
 }
 
-/* �뚯씠釉� �ㅽ��� - �몃줈 - �뷀뀒�� �곹뭹臾몄쓽 */
 .tbl_row.board tr th {
     padding: 22px 0 22px 30px;
     color: #2f2f2f;
@@ -2014,8 +1994,7 @@ h3.title > a {
     display: none;
 }
 .prd_basic .box.out .img .prdimg {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"
-    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    filter : "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     opacity: 0.3;
 }
 .prd_basic .box.out .img .soldout {
@@ -2165,15 +2144,7 @@ h3.title > a {
 .prd_basic.recent .box {
     width: 230px;
 }
-.prd_basic.recent .box .count,
-.prd_basic.recent .box .icon,
-.prd_basic.recent .box .img .layer_info,
-.prd_basic.recent .box .img .sale,
-.prd_basic.recent .box .price .consumer,
-.prd_basic.recent .box .price .percent,
-.prd_basic.recent .box .summary {}
 
-/* �곹뭹�ㅽ��� - 湲곕낯 - �뷀뀒�� 肄붾뵒�곹뭹由ъ뒪�� */
 .prd_basic.coordi > li {
     padding-bottom: 17px;
 }
