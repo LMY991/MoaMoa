@@ -287,7 +287,8 @@
                             </div>
                         </div>
                         <!-- 서브페이지 타이틀 텍스트 (일반) -->
-                        <h2 class="subtitle" style="padding-top:100px !important">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGIN</h2>
+                        <h2 class="subtitle" id="sub1"style="padding-top:100px !important">LOGIN</h2>
+                        <br>
                         <style>
                             #login {
                                 width: 960px;
@@ -295,6 +296,9 @@
                                 align-items: center;
                                 flex-direction: row;
                                 justify-content: center;
+                            }
+                            #sub1 {
+                                margin-left: -100px;
                             }
                             .box_member .form_login {
                                 width: 410px;
@@ -337,6 +341,7 @@
                                 padding-left: 20px;
                                 height: 50px;
                                 font-size: 14px;
+                                width: 300px;
                             }
                             input[type="checkbox"].member {
                                 margin-left: 10px;
@@ -424,9 +429,8 @@
                                         <input type="hidden" name='url' value='/'/>
 
                                         <fieldset>
-                                            <legend>회원로그인</legend>
                                             <div class="fld">
-                                                <label>아이디</label>
+                                                <label>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                                 <input
                                                     type="text"
                                                     name="id"
@@ -436,7 +440,7 @@
                                                     autocomplete="off">
                                             </div>
                                             <div class="fld">
-                                                <label>비밀번호</label>
+                                                <label>비밀번호&nbsp;&nbsp;&nbsp;</label>
                                                 <input
                                                     type="password"
                                                     name="passwd"
@@ -473,24 +477,6 @@
                                         </ul>
 
                                     </form>
-                                    <div style="overflow:hidden; margin-top:40px;">
-                                        <div style="float:left; font-weight:600; font-size:14px">
-                                            간편하게 시작하기
-                                        </div>
-                                        <ul class="sns_login">
-                                            <li class="kakao">
-                                                <a href="javascript:;" onclick="kakao_login_call()">
-                                                    카카오
-                                                    <span id="kakao-login-btn" style='display: none;'></span>
-                                                    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-                                                    <script type='text/javascript'></script>
-                                                    <!-- 회원로그인폼 -->
-                                                </div>
-                                            </fieldset>
-                                        </form>
-                                        <!-- sns로그인 -->
-                                        <!-- //sns로그인 -->
-                                    </div>
                                 </div>
                             </div>
                         </div>
