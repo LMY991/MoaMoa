@@ -604,7 +604,7 @@
         <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
         <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
         <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-       <link rel="stylesheet" href="https://use.typekit.net/puo4qmu.css">
+        <link rel="stylesheet" href="https://use.typekit.net/puo4qmu.css">
         <link rel="stylesheet" href="css/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
         <link rel="stylesheet" type="text/css" href="css/slick.css">
@@ -949,7 +949,7 @@
                                         <div class="mobile addbtn">
                                             <label for="join_cell">휴대폰 번호
                                                 <span>*</span></label>
-                                            <select name="join_cell" style="position:absolute;">
+                                            <select name="join_cell" >
                                                 <option value="010">010</option>
                                                 <option value="011">011</option>
                                                 <option value="016">016</option>
@@ -975,7 +975,7 @@
                                         <div>
                                             <label for="join_year">생년월일
                                                 <span>*</span></label>
-                                            <select name="join_year" class="join_year">
+                                            <select name="join_year">
                                                 <option value="2022">2022</option>
                                                 <option value="2021">2021</option>
                                                 <option value="2020">2020</option>
@@ -1061,7 +1061,7 @@
                                                 <option value="1940">1940</option>
                                             </select>
 
-                                            <select name="join_month" class="join_month">
+                                            <select name="join_month">
                                                 <option value="01">01</option>
                                                 <option value="02">02</option>
                                                 <option value="03">03</option>
@@ -1076,7 +1076,7 @@
                                                 <option value="12">12</option>
                                             </select>
 
-                                            <select name="join_day" class="join_day">
+                                            <select name="join_day">
                                                 <option value="01">01</option>
                                                 <option value="02">02</option>
                                                 <option value="03">03</option>
@@ -1174,6 +1174,214 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    function join_chk() {
+                        if ($('input[name="join_name"]').val() == '') {
+                            alert("이름을 입력해주세요.");
+                            $('input[name="join_name"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_id"]').val() == '') {
+                            alert("아이디를 입력해주세요.");
+                            $('input[name="join_id"]').focus();
+                            return false;
+                        }
+
+                        if ($('#id_chk').attr('data-id') == '') {
+                            alert("중복확인을 해주세요.");
+                            $('#id_chk').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_pw"]').val() == '') {
+                            alert("비밀번호를 입력해주세요.");
+                            $('input[name="join_pw"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_pw"]').val().length < 6 || $('input[name="join_pw"]').val().length > 20) {
+                            alert("비밀번호는 6~30자리 이어야 합니다.");
+                            $('input[name="join_pw"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_pw1"]').val() == '') {
+                            alert("비밀번호 확인을 입력해주세요.");
+                            $('input[name="join_pw1"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_pw"]').val() != $('input[name="join_pw1"]').val()) {
+                            alert("비밀번호가 일치하지 않습니다.");
+                            $('input[name="join_pw"]').val("");
+                            $('input[name="join_pw1"]').val("");
+                            return false;
+                        }
+
+                        if ($('input[name="join_cell1"]').val() == '') {
+                            alert("휴대폰번호를 입력해주세요.");
+                            $('input[name="join_cell1"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_cell2"]').val() == '') {
+                            alert("휴대폰번호를 입력해주세요.");
+                            $('input[name="join_cell2"]').focus();
+                            return false;
+                        }
+
+                        if ($('#phone_chk').attr('data-phone') == '') {
+                            alert("핸드폰인증을 해주세요.");
+                            $('#phone_chk').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="phone_code"]').val() == '') {
+                            alert("핸드폰 인증번호를 입력해주세요.");
+                            $('input[name="phone_code"]').focus();
+                            return false;
+                        }
+
+                        if ($('#code_chk').attr('data-code') == '') {
+                            alert("인증번호 확인해주세요.");
+                            $('#code_chk').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_year"]').val() == '') {
+                            alert("생년월일을 입력해주세요.");
+                            $('input[name="join_year"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_month"]').val() == '') {
+                            alert("생년월일을 입력해주세요.");
+                            $('input[name="join_month"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_day"]').val() == '') {
+                            alert("생년월일을 입력해주세요.");
+                            $('input[name="join_day"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="join_email0"]').val() == '') {
+                            alert("이메일을 입력해주세요.");
+                            $('input[name="join_email0"]').focus();
+                            return false;
+                        }
+
+                        if (!$('input[name="join_email1"]').val()) {
+                            alert("이메일을 입력해주세요.");
+                            $('input[name="join_email1"]').focus();
+                            return false;
+                        }
+
+                        if ($('input[name="email_agree"]').is(":checked") == false) {
+                            alert("이메일 수신여부를 선택해주세요.");
+                            $('input[name="email_agree"]').focus();
+                            return false;
+                        }
+
+                        return true;
+                    }
+
+                    function autoFocus(num, obj, nextObj) {
+                        if (document.getElementById(obj).value.length == num) {
+                            document
+                                .getElementById(nextObj)
+                                .focus();
+                        }
+                    }
+
+                    function id_chk() {
+                        var id = $('input[name="join_id"]').val();
+
+                        if ($('input[name="join_id"]').val() == '') {
+                            alert("아이디를 입력해주세요.");
+                            $('input[name="join_id"]').focus();
+                            return false;
+                        }
+
+                        $.ajax({
+                            url: '/member/join_step2.php',
+                            type: 'post',
+                            async: false,
+                            data: {
+                                mode: 'id_chk',
+                                id: id
+                            },
+                            success: function (data) {
+                                eval(data);
+                            }
+                        });
+                    }
+
+                    function phone_chk() {
+                        var cp1 = $('select[name="join_cell"]').val();
+                        var cp2 = $('input[name="join_cell1"]').val();
+                        var cp3 = $('input[name="join_cell2"]').val();
+
+                        if (cp2 == '') {
+                            alert("휴대폰번호를 입력해주세요.");
+                            $('input[name="join_cell1"]').focus();
+                            return false;
+                        }
+
+                        if (cp3 == '') {
+                            alert("휴대폰번호를 입력해주세요.");
+                            $('input[name="join_cell2"]').focus();
+                            return false;
+                        }
+
+                        $.ajax({
+                            url: '/member/join_step2.php',
+                            type: 'post',
+                            async: false,
+                            data: {
+                                mode: 'phone_chk',
+                                cp1: cp1,
+                                cp2: cp2,
+                                cp3: cp3
+                            },
+                            success: function (data) {
+                                eval(data);
+                            }
+                        });
+                    }
+
+                    function code_chk() {
+                        var cp1 = $('select[name="join_cell"]').val();
+                        var cp2 = $('input[name="join_cell1"]').val();
+                        var cp3 = $('input[name="join_cell2"]').val();
+                        var code = $('input[name="phone_code"]').val();
+
+                        if ($('input[name="phone_code"]').val() == '') {
+                            alert("인증번호를 입력해주세요.");
+                            $('input[name="phone_code"]').focus();
+                            return false;
+                        }
+
+                        $.ajax({
+                            url: '/member/join_step2.php',
+                            type: 'post',
+                            async: false,
+                            data: {
+                                mode: 'code_chk',
+                                cp1: cp1,
+                                cp2: cp2,
+                                cp3: cp3,
+                                code: code
+                            },
+                            success: function (data) {
+                                eval(data);
+                            }
+                        });
+                    }
+                </script>
+
             </section>
             <!-- Sctipt -->
             <script src="js/jquery-3.3.1.min.js"></script>
