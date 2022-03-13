@@ -60,6 +60,10 @@ img {
 	max-width: 100%;
 }
 
+.user {
+	text-align: center;
+}
+
 input:focus,
 select:focus,
 button:focus,

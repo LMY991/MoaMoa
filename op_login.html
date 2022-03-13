@@ -8,27 +8,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
             rel="stylesheet">
-        <!-- JS -->
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script type="text/javascript" src="js/jquery.form.min.js"></script>
-        <script type="text/javascript" src="js/clipboard.js"></script>
 
-        <script type="text/javascript" src="js/swiper.min.js"></script>
-        <script type="text/javascript" src="js/slick.min.js"></script>
-        <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
-        <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
-        <script type="text/javascript" src="js/cookie.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
-        <script type="text/javascript" src="js/goods.js"></script>
-        <script type="text/javascript" src="js/buy.js"></script>
-        <script type="text/javascript" src="js/member.js"></script>
-        <script type="text/javascript" src="js/order.js"></script>
-        <script type="text/javascript" src="js/site.js"></script>
-        <script type="text/javascript" src="js/giftCard.js"></script>
-        <script type="text/javascript" src="js/scm.js"></script>
-        <script type="text/javascript" src="js/review.js"></script>
         <!-- CSS Styles -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -183,8 +163,20 @@
                                     </a>
                                 </div>
                                 <div class="header__top__right__auth">
-                                    <a href="./login.html">
+                                    <a href="ind_login.html">
                                         <i class="fa fa-user"></i>
+                                        개인&nbsp;&nbsp;</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="corp_login.html">
+                                        기업&nbsp;&nbsp;</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="op_login.html">
+                                        운영자</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a>
                                         로그인</a>
                                 </div>
                             </div>
@@ -307,6 +299,8 @@
                             </div>
                         </div>
                         <!-- 서브페이지 타이틀 텍스트 (일반) -->
+                        <h2 class="subtitle" id="sub1"style="padding-top:100px !important">LOGIN</h2>
+                        <br>
                         <style>
                             #login {
                                 width: 960px;
@@ -314,6 +308,9 @@
                                 align-items: center;
                                 flex-direction: row;
                                 justify-content: center;
+                            }
+                            #sub1 {
+                                margin-left: -100px;
                             }
                             .box_member .form_login {
                                 width: 410px;
@@ -356,6 +353,7 @@
                                 padding-left: 20px;
                                 height: 50px;
                                 font-size: 14px;
+                                width: 300px;
                             }
                             input[type="checkbox"].member {
                                 margin-left: 10px;
@@ -431,96 +429,97 @@
                                 font-size: 12px;
                             }
                         </style>
-                        <form id='kakao_form' action="/api/kakaoSync/loginCheck.php" method='POST'>
-                            <input type="hidden" name='url' value='/'>
-                            <input type="hidden" name='id' id='id'>
-                            <input type="hidden" name='nickname' id='nickname'>
-                            <input type="hidden" name='email' id='email'>
-                            <input type="hidden" name='cp' id='cp'>
-                            <input type="hidden" name='birthyear' id='birthyear'>
-                            <input type="hidden" name='birthday' id='birthday'>
-                        </form>
-                        <div style="text-align:center;padding-top:20px;">
-                            <a href="javascript:;" onclick="kakao_login_call()"><img src="https://atimg.sonyunara.com/attrangs/banner/kakao-pc.jpg"/></a>
-                        </div>
-                        <!--카카오-->
-                        <!-- 서브페이지 타이틀 텍스트 (일반) -->
-                        <br>
-                        <h2 class="subtitle">회원가입</h2>
-                        <!-- 서브페이지 타이틀 텍스트 (일반) -->
-
                         <div class="cntbody">
+                            <div id="login" class="box_member">
+                                <div class="form_login form_box">
+                                    <!-- 회원로그인폼 -->
+                                    <form
+                                        name="loginform"
+                                        method="post"
+                                        action="/member/loginpro.php"
+                                        onsubmit=" MemberProc.loginDataCheck();">
+                                        <input type="hidden" name='url' value='/'/>
 
-                            <!-- 회원가입 스텝 -->
-                            <ol class="join_step">
-                                <li class="agree active">
-                                    <span>01</span>
-                                    이용약관 동의</li>
-                                <li class="form">
-                                    <span>02</span>
-                                    회원정보입력</li>
-                                <li class="finish">
-                                    <span>03</span>
-                                    회원가입 완료</li>
-                            </ol>
-                            <!-- //회원가입 스텝 -->
+                                        <fieldset>
+                                            <div class="fld">
+                                                <label>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                                <input
+                                                    type="text"
+                                                    name="id"
+                                                    value=""
+                                                    class="form_input member"
+                                                    placeholder="아이디"
+                                                    autocomplete="off">
+                                            </div>
+                                            <div class="fld">
+                                                <label>비밀번호&nbsp;&nbsp;&nbsp;</label>
+                                                <input
+                                                    type="password"
+                                                    name="passwd"
+                                                    value=""
+                                                    class="form_input member"
+                                                    placeholder="비밀번호"
+                                                    autocomplete="off">
+                                            </div>
+                                            <div class="fld">
+                                                <input type="checkbox" name="saveid" value="Y" class="member">
+                                                <label
+                                                    style="display: inline-block; vertical-align: middle; margin-right: 4px; margin-bottom: 1px;">아이디 저장</label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="autoLogin"
+                                                    value="1"
+                                                    class="member"
+                                                    style="margin-right: 4px;">
+                                                <label
+                                                    style="display: inline-block; vertical-align: middle; margin-right: 4px; margin-bottom: 1px;">자동로그인</label>
+                                            </div>
+                                            <span class="memberbtn"><input type="submit" value="로그인"></span>
+                                        </fieldset>
+                                        <ul class="find_remove">
+                                            <li>
+                                                <a href="/member/search_id_pw.php">아이디/비밀번호 찾기</a>
+                                            </li>
+                                            <li>
+                                                <a href="/member/dormant.php">휴면해제</a>
+                                            </li>
+                                            <li>
+                                                <a href="op_signup_step1.html">회원가입</a>
+                                            </li>
+                                        </ul>
 
-                            <div id="join_agree">
-                                <!-- 이용약관 -->
-                                <iframe name="" src="use.html" scrolling="yes" frameborder="0" style="width: 860px"></iframe>
-                                <!-- //이용약관 -->
-                                <p class="check">
-                                    <input type="radio" name="use_agree" id="use_agree" value="Y">
-                                    <label for="use_agree">동의함</label>
-                                    <input type="radio" name="use_agree" id="use_noagree" value="N">
-                                    <label for="use_noagree">동의안함</label>
-                                </p>
-                                <!-- 개인정보처리방침 -->
-                                <iframe name="" src="privacy.html" scrolling="yes" frameborder="0" style="width: 860px"></iframe>
-                                <!-- //개인정보처리방침 -->
-                                <p class="check">
-                                    <input type="radio" name="privacy_agree" id="privacy_agree" value="Y">
-                                    <label for="privacy_agree">동의함</label>
-                                    <input type="radio" name="privacy_agree" id="privacy_noagree" value="N">
-                                    <label for="privacy_noagree">동의안함</label>
-                                </p>
-                                <div class="btn tac">
-                                    <span class="box_btn w144 h45 fs15">
-                                        <a href="javascript:" onclick="agree_chk();">확인</a>
-                                    </span>
+                                    </form>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
-                </section>
-                <!-- Sctipt -->
-                <script src="js/jquery-3.3.1.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-                <script src="js/jquery.nice-select.min.js"></script>
-                <script src="js/jquery-ui.min.js"></script>
-                <script src="js/jquery.slicknav.js"></script>
-                <script src="js/mixitup.min.js"></script>
-                <script src="js/owl.carousel.min.js"></script>
-                <script src="js/main.js"></script>
-                <script src="js/jquery-1.11.3.min.js"></script>
-                <script src="js/jquery-ui.js"></script>
-                <script src="js/jquery.form.min.js"></script>
-                <script type="text/javascript" src="js/clipboard.js"></script>
-                <script type="text/javascript" src="js/swiper.min.js"></script>
-                <script type="text/javascript" src="js/click.min.js"></script>
-                <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
-                <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
-                <script type="text/javascript" src="js/cookie.js"></script>
-                <script type="text/javascript" src="js/script.js"></script>
-                <script type="text/javascript" src="js/custom.js"></script>
-                <script type="text/javascript" src="js/good.js"></script>
-                <script type="text/javascript" src="js/buy.js"></script>
-                <script type="text/javascript" src="js/member.js"></script>
-                <script type="text/javascript" src="js/order.js"></script>
-                <script type="text/javascript" src="js/site.js"></script>
-                <script type="text/javascript" src="js/giftCard.js"></script>
-                <script type="text/javascript" src="js/scm.js"></script>
-                <script type="text/javascript" src="/js/review.js"></script>
-            </body>
-        </html>
+                    </section>
+                    <!-- Sctipt -->
+                    <script src="js/jquery-3.3.1.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/jquery.nice-select.min.js"></script>
+                    <script src="js/jquery-ui.min.js"></script>
+                    <script src="js/jquery.slicknav.js"></script>
+                    <script src="js/mixitup.min.js"></script>
+                    <script src="js/owl.carousel.min.js"></script>
+                    <script src="js/main.js"></script>
+                    <script src="js/jquery-1.11.3.min.js"></script>
+                    <script src="js/jquery-ui.js"></script>
+                    <script src="js/jquery.form.min.js"></script>
+                    <script type="text/javascript" src="js/clipboard.js"></script>
+                    <script type="text/javascript" src="js/swiper.min.js"></script>
+                    <script type="text/javascript" src="js/click.min.js"></script>
+                    <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
+                    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+                    <script type="text/javascript" src="js/cookie.js"></script>
+                    <script type="text/javascript" src="js/script.js"></script>
+                    <script type="text/javascript" src="js/custom.js"></script>
+                    <script type="text/javascript" src="js/good.js"></script>
+                    <script type="text/javascript" src="js/buy.js"></script>
+                    <script type="text/javascript" src="js/member.js"></script>
+                    <script type="text/javascript" src="js/order.js"></script>
+                    <script type="text/javascript" src="js/site.js"></script>
+                    <script type="text/javascript" src="js/giftCard.js"></script>
+                    <script type="text/javascript" src="js/scm.js"></script>
+                    <script type="text/javascript" src="/js/review.js"></script>
+                </body>
+            </html>
