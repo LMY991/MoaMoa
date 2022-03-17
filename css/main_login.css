@@ -39,7 +39,7 @@
 .int-area input:focus + label,
 .int-area input:valid + label {
     top: -2px;
-    font-size: 13px; color: #166cea;
+    font-size: 13px; color: #5B995B;
 }
 
 .btn-area {margin-top: 30px;}
