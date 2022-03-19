@@ -23,6 +23,23 @@
         <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
         <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <!--로그인 팝업창 관련 css, jquery 코드-->
+        <link rel="stylesheet" href="css/inquire_style.css" type="text/css">
+        <link rel="stylesheet" href="css/inquire_default.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type>
+$(document).ready(function(){
+	
+	$(".open").on('click',function(){
+		$(".popup").show();
+		$(".dim").show();
+	});
+	$(".popup .close").on('click',function(){
+		$(this).parent().hide();
+		$(".dim").hide();
+	});
+});
+</script>
     </head>
 
     <body>
@@ -59,28 +76,51 @@
                                         <i class="fa fa-linkedin"></i>
                                     </a>
                                 </div>
-                                <div class="header__top__right__auth">
-                                    <a href="ind_login.html">
+                                <div class="header__top__right__auth" class="open">
+                                    <a href="#a" class="open">
                                         <i class="fa fa-user"></i>
                                         개인&nbsp;&nbsp;</a>
                                 </div>
                                 <div class="header__top__right__auth">
-                                    <a href="corp_login.html">
+                                    <a href="#a" class="open">
                                         기업&nbsp;&nbsp;</a>
                                 </div>
                                 <div class="header__top__right__auth">
-                                    <a href="op_login.html">
+                                    <a href="#a" class="open">
                                         운영자</a>
                                 </div>
                                 <div class="header__top__right__auth">
                                     <a>
-                                        로그인</a>
+                                        ← 로그인</a> <!--이민영- 로그인하는 곳인 것을 알 수 있게 화살표 추가-->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!--이민영: 로그인 팝업창 div 코드 작성-->
+            <div class="popup">
+                
+            </div>
+            <div class="dim"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3">
