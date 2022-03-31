@@ -56,23 +56,6 @@
         </script>
         <!--스타일 부분-->
         <style> 
-            .info_boxs{
-                width: 100%;
-                height: 320px;
-                background-color: rgb(255, 244, 233);
-                padding: 10px;
-                margin: 0 auto;
-            }
-            .info_box{
-                border: 2px solid rgb(179, 179, 179);
-                background-color: white;
-                padding: 10px;
-                width: 47%;
-                height: 100%;
-                margin: 0 10px;
-                float:left;
-                padding: 40px;
-            }
             .profile_box{
                 width: 120px;
                 height: 120px;
@@ -85,11 +68,9 @@
                 height: 100%;
                 object-fit: cover;
             }
-            .info_button{
-                margin: 10px;
-            }
-            span{
-                color: black;
+            .profile_t{
+                margin:5px;
+                margin-bottom: 20px;
             }
         </style>
     </head>
@@ -226,7 +207,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="header__logo">
-                            <a href="./index.html"><img src="img/logo2.png"></a>
+                            <a href="./index.html"><img src="img/logo.png"></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -338,6 +319,28 @@
                         </div>
                     </div>
                     <div class="container">
+                        <h2 class="subtitle" id="sub1"style="padding-top:100px !important; ">프로필 변경</h2>
+                        <br>
+                        <hr>
+                        <div style="display: flex;">
+                            <div style="margin: 30px;">
+                                <div class="profile_box">
+                                    <img class="profile" src="img/blog/blog-6.jpg">
+                                </div>
+                                <input class="info_button" type="button" value="프로필 변경" style="margin-left: 20px;">
+                            </div>
+                            <div style="margin: 20px; width: 70%;">
+                                <p>아이디</p> <input class="profile_t" type="text">
+                                <p>이름</p> <input class="profile_t" type="text">
+                                <p>이메일</p> <input class="profile_t" type="text">
+                                <p>휴대폰 번호</p> <input class="profile_t" type="text">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="container">
                         <h2 class="subtitle" id="sub1"style="padding-top:100px !important; ">내정보 확인</h2>
                         <br>
                         <div class="info_boxs">
@@ -376,7 +379,7 @@
                                 <input class="info_button" type="button" value="조회하기">
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                     </section>
                     <!-- Sctipt -->

@@ -56,26 +56,66 @@
         </script>
         <!--스타일 부분-->
         <style> 
-            .info_boxs{
+            .info_main_box{
+                border: 2px solid rgb(231, 231, 231);
+                background-color: rgb(255, 255, 255);
                 width: 100%;
-                height: 320px;
-                background-color: rgb(255, 244, 233);
-                padding: 10px;
+                height: 300px;
+                margin-bottom: 30px;
+                padding: 30px;
+            }
+            .info_main_box_con{
+                float: left;
+                text-align: center;
+                padding: 0 32px;
+                margin-top: 12px;
+            }
+            .info_delivery_box{
+                border: 2px solid rgb(231, 231, 231);
+                background-color: white;
+                width: 100%;
+                height: 250px;
+                padding: 30px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            .info_delivery_box_con{
+                float: left;
+                margin: 10px;
+                padding-left: 20px;
+            }
+            .delivery_icon{
+                width: 60px;
+                height: 60px;
+                margin: 10px;
+            }
+            .info_line{
+                float: left;
+            }
+            .info_menu{
+                width: 180px;
+                height: 800px;
+                margin: 20px;
+            }
+            .info_boxs{
+                width: 500px;
+                height: 400px;
+                background-color: rgb(206, 206, 206);
                 margin: 0 auto;
+                padding: 30px;
             }
             .info_box{
-                border: 2px solid rgb(179, 179, 179);
-                background-color: white;
-                padding: 10px;
-                width: 47%;
-                height: 100%;
+                background-color: rgb(240, 240, 240);
+                padding: 40px;
+                width: 200px;
+                height: 300px;
                 margin: 0 10px;
                 float:left;
-                padding: 40px;
+                text-align: center;
             }
             .profile_box{
-                width: 120px;
-                height: 120px;
+                width: 80px;
+                height: 80px;
                 border-radius: 70%;
                 overflow: hidden;
                 margin: 10px;
@@ -90,6 +130,15 @@
             }
             span{
                 color: black;
+            }
+            ul{
+                list-style: none;
+                font-weight: bold;
+            }
+            .in_li{
+                padding-left: 10px;
+                font-size: medium;
+                font-weight: normal;
             }
         </style>
     </head>
@@ -226,7 +275,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="header__logo">
-                            <a href="./index.html"><img src="img/logo2.png"></a>
+                            <a href="./index.html"><img src="img/logo.png"></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -338,42 +387,163 @@
                         </div>
                     </div>
                     <div class="container">
-                        <h2 class="subtitle" id="sub1"style="padding-top:100px !important; ">내정보 확인</h2>
+                        <h2 class="subtitle" id="sub1"style="padding-top:100px !important; ">마이페이지</h2>
                         <br>
-                        <div class="info_boxs">
-                            <div class="info_box">
-                                <h3>프로필</h3>
-                                <div style="display: flex;">
-                                    <div>
+                        <div class="info_main_box">
+                            <div> 
+                                <div class="info_main_box_con" style="text-align: center; width: 30%; " >
+                                    <P>이름님의 <br> 회원등급은 화이트등급입니다.</P>
+                                    <input class="info_button" type="button" style="float: none;" value="등급혜택보기">
+                                </div>
+                                <div class="info_main_box_con" style="margin-left: 10px; height: 240px; padding-left: 20px; border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                    <div class="info_main_box_con">
                                         <div class="profile_box">
                                             <img class="profile" src="img/blog/blog-6.jpg">
                                         </div>
-                                        <input class="info_button" type="button" value="수정하기">
+                                        <p><span>쿠폰</span></p>
+                                        <h3><strong>1</strong>장</h3>
                                     </div>
-                                    <div style="margin-left: 10px;">
-                                        <h4>별명</h4>
-                                        <p>가나다라</p>
+                                    <div class="info_main_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                        <div class="profile_box">
+                                            <img class="profile" src="img/blog/blog-6.jpg">
+                                        </div>
+                                        <p><span>적립금</span></p>
+                                        <h3><strong>0</strong>원</h3>
+                                    </div>                                    
+                                    <div class="info_main_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                        <div class="profile_box">
+                                            <img class="profile" src="img/blog/blog-6.jpg">
+                                        </div>
+                                        <p><span>예치금</span></p>
+                                        <h3><strong>0</strong>원</h3>
+                                    </div>
+                                    <div class="info_main_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                        <div class="profile_box">
+                                            <img class="profile" src="img/blog/blog-6.jpg">
+                                        </div>
+                                        <p><span>세이브 클럽</span></p>
+                                        <input class="info_button" type="button" style="float: right;" value="알아보기">
                                     </div>
                                 </div>
                             </div>
-                            <div class="info_box">
-                                <h3>연락처</h3>
-                                <p>연락처 이메일 : <span>abcd@abcd.com</span></p>
-                                <p>본인확인 이메일 : <span>1234@abcd.com</span></p>
-                                <p>휴대전화 : <span>010-1234-5678</span></p>
-                                <input class="info_button" type="button" value="수정하기">
+                        </div>
+                        <div class="info_delivery_box">
+                            <div>
+                                <div class="info_delivery_box_con">
+                                    <img class="delivery_icon" src="img/checklist.png">
+                                    <h6>주문접수</h6>
+                                    <h3>0</h3>
+                                </div>
+                                <div class="info_delivery_box_con">
+                                    <img class="delivery_icon" src="img/credit-cards-payment.png">
+                                    <h6>결제완료</h6>
+                                    <h3>0</h3>
+                                </div>
+                                <div class="info_delivery_box_con">
+                                    <img class="delivery_icon" src="img/packaging.png">
+                                    <h6>상품준비중</h6>
+                                    <h3>0</h3>
+                                </div>
+                                <div class="info_delivery_box_con">
+                                    <img class="delivery_icon" src="img/package.png">
+                                    <h6>출고시작</h6>
+                                    <h3>0</h3>
+                                </div>
+                                <div class="info_delivery_box_con">
+                                    <img class="delivery_icon" src="img/truck.png">
+                                    <h6>배송중</h6>
+                                    <h3>0</h3>
+                                </div>
+                                <div class="info_delivery_box_con">
+                                        <img class="delivery_icon" src="img/checked.png">
+                                    <h6>배송완료</h6>
+                                    <h3>0</h3>
+                                </div>
+                                <div class="info_delivery_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231); padding-left: 60px;">
+                                    <p>취소<span style="padding-left: 100px;"></span>0</p>
+                                    <hr>
+                                    <p>교환<span style="padding-left: 100px;"></span>0</p>
+                                    <hr>
+                                    <p>반품<span style="padding-left: 100px;"></span>0</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="info_boxs">
+                        <div class="info_menu info_line">
+                            <ul>
+                                <strong>마이페이지</strong>
+                                <hr>
+                                <li>쇼핑정보
+                                    <ul class="in_li">
+                                        <li>주문목록/배송조회</li>
+                                        <li>취소/반품/교환내역</li>
+                                        <li>환불/입금내역</li>
+                                        <li>찜리스트</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>혜택관리
+                                    <ul class="in_li">
+                                        <li>쿠폰</li>
+                                        <li>예치금</li>
+                                        <li>적립금</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>고객센터
+                                    <ul class="in_li">
+                                        <li>1:1문의</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>회원정보
+                                    <ul class="in_li">
+                                        <li>회원정보 변경</li>
+                                        <li>회원 탈퇴</li>
+                                        <li>배송지 관리</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>나의 상품문의
+                                    <ul class="in_li">
+                                        <li>나의 상품문의</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>나의 상품후기
+                                    <ul class="in_li">
+                                        <li>나의 상품후기</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info_boxs info_line">
                             <div class="info_box">
-                                <h3>지역 설정</h3>
-                                <p>관심지 1 : <span>경기도 부천시</span></p>
-                                <input class="info_button" type="button" value="설정하기">
+                                <h4>주문 관리</h4>
+                                <p>주문/배송조회</p>
+                                <p>최근 본 상품</p>
                             </div>
                             <div class="info_box">
-                                <h3>배송지 관리</h3>
-                                <p>내가 지정한 배송지 및 최근 사용한 배송지를 관리할 수 있습니다.</p>
-                                <input class="info_button" type="button" value="조회하기">
+                                <h4>쇼핑혜택</h4>
+                                <p>쿠폰/적립금</p>
+                                <p>나의등급혜택</p>
+                                <p>포인트</p>
+                                <p>상품권 선물함</p>
+                            </div>
+                        </div>
+                        <div class="info_boxs info_line">
+                            <div class="info_box">
+                                <h4>나의 활동</h4>
+                                <p>내 게시글</p>
+                                <p>상품문의</p>
+                                <p>친구추가</p>
+                                <p>장바구니</p>
+                                <p>좋아요</p>
+                            </div>
+                            <div class="info_box">
+                                <h4>정보관리</h4>
+                                <p>회원정보 수정</p>
+                                <p>배송지, 환불계좌 관리</p>
+                                <p>회원탈퇴</p>
                             </div>
                         </div>
                     </div>
