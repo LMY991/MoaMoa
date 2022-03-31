@@ -26,6 +26,9 @@
         <!--로그인 팝업창 관련 css, jquery 코드-->
         <link rel="stylesheet" href="css/inquire_style.css" type="text/css">
         <link rel="stylesheet" href="css/inquire_default.css" type="text/css">
+        <!--로그인 팝업창 div 코드 css 파일-->
+        <link rel="stylesheet" href="css/logindiv_default2.css" type="text/css">
+        <link rel="stylesheet" href="css/logindiv_style2.css" type="text/css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type>
 $(document).ready(function(){
@@ -101,7 +104,25 @@ $(document).ready(function(){
 
             <!--이민영: 로그인 팝업창 div 코드 작성-->
             <div class="popup">
-                
+                <body>
+                    <section class="login">
+                      <h2>로그인</h2>
+                      <ul>
+                        <li><input type="text" placeholder="아이디" title="아이디입력"></li>
+                        <li><input type="password" placeholder="비밀번호" title="비밀번호입력"></li>
+                        <li><input type="checkbox" id="chk_id"><label for="chk_id">아이디저장</label></li>
+                        <li><button>로그인</button></li>
+                      </ul>
+                      <div>
+                        <ul>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">아이디 찾기</a></li>
+                        <li><a href="">비밀번호 찾기</a></li>
+                        </ul>
+                      </div>
+                      <a href="">비회원 주문조회</a>
+                    </section>
+                  </body>
             </div>
             <div class="dim"></div>
 
