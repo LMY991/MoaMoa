@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe Moa Moa</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
+            rel="stylesheet">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+        <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <link rel="stylesheet" href="https://use.typekit.net/puo4qmu.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="css/slick.css">
+        <link rel="stylesheet" type="text/css" href="css/mypage.css">
+        <link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
+        <link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinFlat.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        <link rel="stylesheet" type="text/css" href="css/board.css">
+        <link rel="stylesheet" type="text/css" href="css/review.css">
+        <link rel="stylesheet" type="text/css" href="css/flower.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/renew.css">
+        <!-- luna herina script start -->
+        <script type="text/javascript">
+            !function (h, e, a, r, i, n, c) {
+                c = function () {};
+                i = e.createElement(a);
+                i.async = !0;
+                i.src = r;
+                i.onload = c;
+                n = e.getElementsByTagName(a)[0];
+                n
+                    .parentNode
+                    .insertBefore(i, n);
+                if (h.hearinaJs) {
+                    c();
+                    return;
+                }
+            }(window, document, 'script', '//cdn.hearina.com/js/luna_hearina_v.0.4.js');
+        </script>
+        <!--스타일 부분-->
+        <style> 
+            .info_main_box{
+                border: 2px solid rgb(231, 231, 231);
+                background-color: rgb(255, 255, 255);
+                width: 100%;
+                height: 300px;
+                margin-bottom: 50px;
+                padding: 10px;
+            }
+            .info_main_box_con{
+                float: left;
+                text-align: center;
+                padding: 0 32px;
+                margin-top: 12px;
+            }
+            .info_delivery_box{
+                border: 2px solid rgb(231, 231, 231);
+                background-color: white;
+                height: 200px;
+                padding: 10px;
+                text-align: center;
+            }
+            .info_delivery_box_con{
+                float: left;
+                margin: 10px;
+                padding-left: 20px;
+            }
+            .delivery_icon{
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+            }
+            .info_line{
+                width: 100%;
+            }
+            .info_menu{
+                width: 180px;
+                height: 700px;
+                margin: 10px;
+            }
+            .info_boxs{
+                width: 500px;
+                height: 400px;
+                background-color: rgb(206, 206, 206);
+                margin: 0 auto;
+                padding: 30px;
+            }
+            .info_box{
+                background-color: rgb(240, 240, 240);
+                padding: 40px;
+                width: 200px;
+                height: 300px;
+                margin: 0 10px;
+                float:left;
+                text-align: center;
+            }
+            .profile_box{
+                width: 80px;
+                height: 80px;
+                border-radius: 70%;
+                overflow: hidden;
+                margin: 10px;
+            }
+            .cnt_num_box{
+                width: 80px;
+                height: 80px;
+                border-radius: 70%;
+                overflow: hidden;
+                margin: 10px;
+                background-color: rgb(230, 230, 230);
+                line-height: 80px;
+                font-size: x-large;
+                font-weight: bold;
+            }
+            .profile{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .info_button{
+                margin: 10px;
+            }
+            span{
+                color: black;
+            }
+            ul{
+                list-style: none;
+                font-weight: bold;
+            }
+            .in_li{
+                padding-left: 10px;
+                font-size: medium;
+                font-weight: normal;
+            }
+            .delivery_list{
+                display:flex;
+                width: 100%;
+                margin: 10px auto;
+            }
+            .delivery_list_col{
+                flex: 1;
+                margin: 0px 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="humberger__menu__overlay"></div>
+        <div class="humberger__menu__wrapper">
+            <div class="humberger__menu__logo">
+                <a href="#">Recipe MOA MOA</a>
+            </div>
+            <div class="humberger__menu__cart">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-heart"></i>
+                            <span>1</span></a>
+                    </li>
+                    <li>
+                        <a href="./shoping-cart.html">
+                            <i class="fa fa-shopping-bag"></i>
+                            <span>3</span></a>
+                    </li>
+                </ul>
+                <div class="header__cart__price">총 주문가격
+                    <span>15000</span></div>
+            </div>
+            <div class="humberger__menu__widget">
+                <div class="header__top__right__auth">
+                    <a href="./login.html">
+                        <i class="fa fa-user"></i>
+                        로그인</a>
+                </div>
+            </div>
+            <nav class="humberger__menu__nav mobile-menu">
+                <ul>
+                    <li class="active">
+                        <a href="./index.html">홈</a>
+                    </li>
+                    <li>
+                        <a href="./shop-grid.html">제품</a>
+                    </li>
+                    <li>
+                        <a href="#">주문하기</a>
+                        <ul class="header__menu__dropdown">
+                            <li>
+                                <a href="./checkout.html">배달하기</a>
+                            </li>
+                            <li>
+                                <a href="./pressent.html">선물하기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./blog.html">블로그</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">고객센터</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+            <div class="header__top__right__social">
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="humberger__menu__contact">
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        zzangsally@gmail.com</li>
+                    <li>10000이상 무료배송</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Humberger End -->
+
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__left">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-envelope"></i>
+                                        zzangsally@gmail.com</li>
+                                    <li>10000이상 무료배송</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__right">
+                                <div class="header__top__right__social">
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="ind_login.html">
+                                        <i class="fa fa-user"></i>
+                                        개인&nbsp;&nbsp;</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="corp_login.html">
+                                        기업&nbsp;&nbsp;</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="op_login.html">
+                                        운영자</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a>
+                                        로그인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="header__logo">
+                            <a href="./index.html"><img src="img/logo.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active">
+                                    <a href="./index.html">홈</a>
+                                </li>
+                                <li>
+                                    <a href="./shop-grid.html">제품</a>
+                                </li>
+                                <li>
+                                    <a href="./checkout.html">주문하기</a>
+                                    <ul class="header__menu__dropdown">
+                                        <li>
+                                            <a href="./checkout.html">배달하기</a>
+                                        </li>
+                                        <li>
+                                            <a href="./pressent.html">선물하기</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="./blog.html">블로그</a>
+                                </li>
+                                <li>
+                                    <a href="./contact.html">고객센터</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header__cart">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        <span>1</span></a>
+                                </li>
+                                <li>
+                                    <a href="./shoping-cart.html">
+                                        <i class="fa fa-shopping-bag"></i>
+                                        <span>3</span></a>
+                                </li>
+                            </ul>
+                            <div class="header__cart__price">총 주문가격
+                                <span>15000</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="humberger__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="hero__categories">
+                            <div class="hero__categories__all">
+                                <i class="fa fa-bars"></i>
+                                <span>카테고리</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">양식</a>
+                                </li>
+                                <li>
+                                    <a href="#">중식</a>
+                                </li>
+                                <li>
+                                    <a href="#">한식</a>
+                                </li>
+                                <li>
+                                    <a href="#">일식</a>
+                                </li>
+                                <li>
+                                    <a href="#">디저트</a>
+                                </li>
+                                <li>
+                                    <a href="#">기타</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="hero__search">
+                            <div class="hero__search__form">
+                                <form action="#">
+                                    <div class="hero__search__categories">
+                                        카테고리
+                                        <span class="arrow_carrot-down"></span>
+                                    </div>
+                                    <input type="text" placeholder="무엇이 필요하신가요?">
+                                    <button type="submit" class="site-btn">찾기</button>
+                                </form>
+                            </div>
+                            <div class="hero__search__phone">
+                                <div class="hero__search__phone__icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="hero__search__phone__text">
+                                    <h5>010-1234-5678</h5>
+                                    <span>매일 24시간 전화 가능</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h2 class="subtitle" id="sub1"style="padding-top:100px !important; ">마이페이지</h2>
+                        <br>
+                        <div class="info_main_box">
+                            <div> 
+                                <div class="info_main_box_con" style="text-align: center; width: 30%;" >
+                                    <div class="info_main_box_con">
+                                        <div class="profile_box" style="margin-left: 60px;">
+                                            <img class="profile" src="img/blog/blog-6.jpg">
+                                        </div>
+                                        <P>이름님의 <br> 회원등급은 화이트등급입니다.</P>
+                                        <input class="info_button" type="button" style="float: none;" value="등급혜택보기">
+                                    </div>
+                                </div>
+                                <div class="info_main_box_con" style="margin-left: 10px; height: 240px; padding-left: 20px; border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                    <div class="info_main_box_con">
+                                        <div class="cnt_num_box">
+                                            1
+                                        </div>
+                                        <p><span>쿠폰</span></p>
+                                        <h3><strong>1</strong>장</h3>
+                                    </div>
+                                    <div class="info_main_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                        <div class="cnt_num_box">
+                                            0
+                                        </div>
+                                        <p><span>적립금</span></p>
+                                        <h3><strong>0</strong>원</h3>
+                                    </div>                                    
+                                    <div class="info_main_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                        <div class="cnt_num_box">
+                                            0
+                                        </div>
+                                        <p><span>예치금</span></p>
+                                        <h3><strong>0</strong>원</h3>
+                                    </div>
+                                    <div class="info_main_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231);">
+                                        <div class="cnt_num_box">
+                                            0
+                                        </div>
+                                        <p><span>세이브 클럽</span></p>
+                                        <input class="info_button" type="button" style="float: right;" value="알아보기">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_line">
+                            <div class="info_menu" style="float: left;">
+                                <ul>
+                                    <strong>마이페이지</strong>
+                                    <hr>
+                                    <li>쇼핑정보
+                                        <ul class="in_li">
+                                            <li>주문목록/배송조회</li>
+                                            <li>취소/반품/교환내역</li>
+                                            <li>환불/입금내역</li>
+                                            <li>찜리스트</li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>혜택관리
+                                        <ul class="in_li">
+                                            <li>쿠폰</li>
+                                            <li>예치금</li>
+                                            <li>적립금</li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>고객센터
+                                        <ul class="in_li">
+                                            <li>1:1문의</li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>회원정보
+                                        <ul class="in_li">
+                                            <li>회원정보 변경</li>
+                                            <li>회원 탈퇴</li>
+                                            <li>배송지 관리</li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>나의 상품문의
+                                        <ul class="in_li">
+                                            <li>나의 상품문의</li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>나의 상품후기
+                                        <ul class="in_li">
+                                            <li>나의 상품후기</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="float: left; margin-left: 30px;">
+                                <div class="info_delivery_box">
+                                    <div>
+                                        <div class="info_delivery_box_con">
+                                            <img class="delivery_icon" src="img/checklist.png">
+                                            <h6>주문접수</h6>
+                                            <h3>0</h3>
+                                        </div>
+                                        <div class="info_delivery_box_con">
+                                            <img class="delivery_icon" src="img/credit-cards-payment.png">
+                                            <h6>결제완료</h6>
+                                            <h3>0</h3>
+                                        </div>
+                                        <div class="info_delivery_box_con">
+                                            <img class="delivery_icon" src="img/packaging.png">
+                                            <h6>상품준비중</h6>
+                                            <h3>0</h3>
+                                        </div>
+                                        <div class="info_delivery_box_con">
+                                            <img class="delivery_icon" src="img/package.png">
+                                            <h6>출고시작</h6>
+                                            <h3>0</h3>
+                                        </div>
+                                        <div class="info_delivery_box_con">
+                                            <img class="delivery_icon" src="img/truck.png">
+                                            <h6>배송중</h6>
+                                            <h3>0</h3>
+                                        </div>
+                                        <div class="info_delivery_box_con">
+                                                <img class="delivery_icon" src="img/checked.png">
+                                            <h6>배송완료</h6>
+                                            <h3>0</h3>
+                                        </div>
+                                        <div class="info_delivery_box_con" style="border-style: none none none solid; border-color: rgb(231, 231, 231); padding-left: 30px;">
+                                            <p>취소<span style="padding-left: 100px;"></span>0</p>
+                                            <hr>
+                                            <p>교환<span style="padding-left: 100px;"></span>0</p>
+                                            <hr>
+                                            <p>반품<span style="padding-left: 100px;"></span>0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin: 30px;">
+                                    <h5>주문내역</h5>
+                                    <hr>
+                                    <div class="delivery_list">
+                                        <div class="delivery_list_col" style="flex: 2.5;">주문물품</div>
+                                        <div class="delivery_list_col">상품금액</div>
+                                        <div class="delivery_list_col">진행상황</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="info_boxs info_line">
+                            <div class="info_box">
+                                <h4>주문 관리</h4>
+                                <p>주문/배송조회</p>
+                                <p>최근 본 상품</p>
+                            </div>
+                            <div class="info_box">
+                                <h4>쇼핑혜택</h4>
+                                <p>쿠폰/적립금</p>
+                                <p>나의등급혜택</p>
+                                <p>포인트</p>
+                                <p>상품권 선물함</p>
+                            </div>
+                        </div>
+                        <div class="info_boxs info_line">
+                            <div class="info_box">
+                                <h4>나의 활동</h4>
+                                <p>내 게시글</p>
+                                <p>상품문의</p>
+                                <p>친구추가</p>
+                                <p>장바구니</p>
+                                <p>좋아요</p>
+                            </div>
+                            <div class="info_box">
+                                <h4>정보관리</h4>
+                                <p>회원정보 수정</p>
+                                <p>배송지, 환불계좌 관리</p>
+                                <p>회원탈퇴</p>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                    </section>
+                    <!-- Sctipt -->
+                    <script src="js/jquery-3.3.1.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/jquery.nice-select.min.js"></script>
+                    <script src="js/jquery-ui.min.js"></script>
+                    <script src="js/jquery.slicknav.js"></script>
+                    <script src="js/mixitup.min.js"></script>
+                    <script src="js/owl.carousel.min.js"></script>
+                    <script src="js/main.js"></script>
+                    <script src="js/jquery-1.11.3.min.js"></script>
+                    <script src="js/jquery-ui.js"></script>
+                    <script src="js/jquery.form.min.js"></script>
+                    <script type="text/javascript" src="js/clipboard.js"></script>
+                    <script type="text/javascript" src="js/swiper.min.js"></script>
+                    <script type="text/javascript" src="js/click.min.js"></script>
+                    <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
+                    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+                    <script type="text/javascript" src="js/cookie.js"></script>
+                    <script type="text/javascript" src="js/script.js"></script>
+                    <script type="text/javascript" src="js/custom.js"></script>
+                    <script type="text/javascript" src="js/good.js"></script>
+                    <script type="text/javascript" src="js/buy.js"></script>
+                    <script type="text/javascript" src="js/member.js"></script>
+                    <script type="text/javascript" src="js/order.js"></script>
+                    <script type="text/javascript" src="js/site.js"></script>
+                    <script type="text/javascript" src="js/giftCard.js"></script>
+                    <script type="text/javascript" src="js/scm.js"></script>
+                    <script type="text/javascript" src="/js/review.js"></script>
+                </body>
+            </html>
