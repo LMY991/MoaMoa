@@ -27,11 +27,75 @@
 
     <body>
         <style>
+            .mypage_zone_tit {
+                margin: 0;
+                padding: 0 0 10px;
+                font-size: 16px;
+            }
+            .mypage_zone_tit h3 {
+                display: inline-block;
+                font-size: 16px;
+            }
+            .mypage_zone_tit h4 {
+                font-size: 16px;
+            }
+            .mypage_zone_tit span {
+                padding: 0 0 0 5px;
+                color: #777777;
+                font-size: 12px;
+                font-weight: normal;
+            }
+            .mypage_shipping .mypage_zone_tit h3 {
+                display: inline-block;
+            }
+            .mypage_shipping .mypage_zone_tit .pick_list_num {
+                display: inline-block;
+            }
             #mypage .step {
                 position: relative;
             }
             #mypage .step ul li {
                 width: 16.6%;
+            }
+            .mypage_lately_goods {
+                margin: 50px 0 0;
+            }
+            .mypage_lately_goods .mypage_zone_tit {
+                margin: 0 0 20px;
+                border-bottom: 1px solid #999999;
+            }
+            .mypage_lately_goods .goods_list_cont ul li {
+                margin-top: 10px;
+            }
+            .my_page_password .mypage_zone_tit {
+                margin: 0 0 50px;
+                padding: 0 0 10px;
+                font-size: 14px;
+                border-bottom: 1px solid #999999;
+            }
+            .my_page .mypage_zone_tit {
+                margin: 0 0 50px;
+                padding: 0 0 10px;
+                font-size: 14px;
+                border-bottom: 1px solid #3c3c3c;
+            }
+            .hack_out .mypage_zone_tit {
+                margin: 0 0 50px;
+                padding: 0 0 10px;
+                font-size: 14px;
+                border-bottom: 1px solid #999999;
+            }
+            .hack_out .mypage_unregister .mypage_zone_tit {
+                margin: 0;
+                padding: 0 0 10px;
+                font-size: 14px;
+                border-bottom: none 0;
+            }
+            dl,
+            li,
+            ol,
+            ul {
+                list-style: none;
             }
             #cnt .cntbody {
                 position: relative;
@@ -295,7 +359,7 @@
                                                         <span>브론즈등급</span>
                                                         입니다.
                                                         <div class="btn_layer">
-                                                                <input class="info_button" type="button" style="float: none;" value="등급혜택보기">
+                                                            <input class="info_button" type="button" style="float: none;" value="등급혜택보기">
                                                             <!-- N : 회원등급혜택 레이어 시작 -->
                                                             <div id="lyGrade" class="layer_area" style="display:none;">
                                                                 <div class="ly_wrap grade_layer">
@@ -374,13 +438,6 @@
                                                                 </a>원</span>
                                                         </li>
                                                         <!-- seum 210916 셰프멤버스 버튼 추가-->
-                                                        <li class="btn_chef">
-                                                            <span><img
-                                                                src="/data/skin/front/udweb_pc_20200903/img/icon/mypage/icon_balance.png"
-                                                                alt=""></span>
-                                                    
-                                                        </li>
-                                                        <!-- //seum 210916 셰프멤버스 버튼 추가-->
                                                     </ul>
                                                 </div>
                                                 <!-- //mypage_top_wallet -->
@@ -393,36 +450,36 @@
 
                                     <div class="mypage_lately_info">
                                         <div class="mypage_zone_tit">
-                                            <h3>주문목록/배송조회</h3>
+                                            <h3>예치금</h3>
                                         </div>
 
                                         <div class="date_check_box">
-                                            <form method="get" name="frmDateSearch">
+                                            <form name="formSearch" id="formSearch" method="get">
                                                 <h3>
                                                     조회기간
                                                 </h3>
-                                                <div class="date_check_list" data-target-name="wDate[]">
+                                                <div class="date_check_list" data-target-name="regDt[]">
                                                     <button type="button" data-value="0">오늘</button>
                                                     <button type="button" data-value="7">7일</button>
                                                     <button type="button" data-value="15">15일</button>
                                                     <button type="button" data-value="30">1개월</button>
                                                     <button type="button" data-value="90">3개월</button>
-                                                    <button type="button" class="oneYear" data-value="365">1년</button>
+                                                    <button type="button" data-value="365">1년</button>
                                                 </div>
                                                 <!-- //date_check_list -->
                                                 <div class="date_check_calendar">
                                                     <input
                                                         type="text"
                                                         id="picker2"
-                                                        name="wDate[]"
+                                                        name="regDt[]"
                                                         class="anniversary js_datepicker"
-                                                        value="2022-03-13">
+                                                        value="2022-03-20">
                                                     ~
                                                     <input
                                                         type="text"
-                                                        name="wDate[]"
+                                                        name="regDt[]"
                                                         class="anniversary js_datepicker"
-                                                        value="2022-03-20">
+                                                        value="2022-03-27">
                                                 </div>
                                                 <!-- //date_check_calendar -->
 
@@ -430,127 +487,221 @@
                                                     조회
                                                 </button>
                                             </form>
+
                                         </div>
                                         <!-- //date_check_box -->
 
                                         <div class="mypage_lately_info_cont">
-                                            <span class="pick_list_num">
-                                                주문목록 / 배송조회 내역 총
-                                                <strong>0</strong>
-                                                건
-                                            </span>
-                                            <!-- 주문상품 리스트 -->
+
                                             <div class="mypage_table_type">
+                                                <span class="pick_list_day">
+                                                    <strong>2022-03-20 ~ 2022-03-27
+                                                    </strong>
+                                                    까지의 예치금 사용내역 총
+                                                    <strong>0</strong>건</span>
                                                 <table>
                                                     <colgroup>
-                                                        <col style="width:15%">
-                                                        <!-- 날짜/주문번호 -->
+                                                        <col style="width:12%">
+                                                        <!-- 날짜 -->
+                                                        <col style="width:12%">
+                                                        <!-- 유형 -->
                                                         <col>
-                                                        <!-- 상품명/옵션 -->
+                                                        <!-- 내용 -->
                                                         <col style="width:15%">
-                                                        <!-- 상품금액/수량 -->
+                                                        <!-- 예치금 내역 -->
                                                         <col style="width:15%">
-                                                        <!-- 주문상태 -->
-                                                        <col style="width:15%">
-                                                        <!-- 확인/리뷰 -->
+                                                        <!-- 잔여 예치금 -->
                                                     </colgroup>
                                                     <thead>
                                                         <tr>
-                                                            <th>날짜/주문번호</th>
-                                                            <th>상품명/옵션</th>
-                                                            <th>상품금액/수량</th>
-                                                            <th>주문상태</th>
-                                                            <th>
-                                                                확인/리뷰
-                                                            </th>
+                                                            <th>날짜</th>
+                                                            <th>유형</th>
+                                                            <th>내용</th>
+                                                            <th class="td_cash">
+                                                                예치금 내역</th>
+                                                            <th class="td_cash">
+                                                              잔여 예치금</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-
-                                                        <tr>
-                                                            <td colspan="6">
-                                                                <p class="no_data">조회내역이 없습니다.</p>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
+                                                    <tbody></tbody>
                                                 </table>
                                             </div>
 
-                                            <!-- Js Plugins -->
-                                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-                                            <script src="js/bootstrap.min.js"></script>
-                                            <script src="js/jquery.nice-select.min.js"></script>
-                                            <script src="js/jquery-ui.min.js"></script>
-                                            <script src="js/jquery.slicknav.js"></script>
-                                            <script src="js/mixitup.min.js"></script>
-                                            <script src="js/owl.carousel.min.js"></script>
-                                            <script src="js/main.js"></script>
-                                            <script>
-                                                if ($('.date_check_list').length) {
-                                                    $('.date_check_list button').click(function (e) {
-                                                        $startDate = $endDate = '';
-                                                        $period = $(this).data('value');
-                                                        $elements = $(
-                                                            'input[name="' + $(this).closest('.date_check_list').data('target-name') +
-                                                            '"]'
-                                                        );
-                                                        $format = $($elements[0])
-                                                            .data('DateTimePicker')
-                                                            .format();
-                                                        if ($period >= 0) {
-                                                            $startDate = moment()
-                                                                .hours(0)
-                                                                .minutes(0)
-                                                                .seconds(0)
-                                                                .subtract($period, 'days')
-                                                                .format($format);
-                                                            $endDate = moment()
-                                                                .hours(0)
-                                                                .minutes(0)
-                                                                .seconds(0)
-                                                                .format($format);
-                                                        }
-                                                        $($elements[0]).val($startDate);
-                                                        $($elements[1]).val($endDate);
-                                                        $('.date_check_list button').removeClass('on');
-                                                        $(this).addClass('on');
-                                                    });
+                                        </div>
+                                        <!-- //mypage_lately_info_cont -->
+                                    </div>
+                                    <!-- //mypage_lately_info -->
 
-                                                    // 선택된 버튼에 따른 값 초기화
-                                                    $elements = $(
-                                                        'input[name*=\'' + $('.date_check_list').data('target-name') + '\']'
-                                                    );
-                                                    if ($elements.length && $elements.val() != '') {
-                                                        $interval = moment($($elements[1]).val()).diff(
-                                                            moment($($elements[0]).val()),
-                                                            'days'
-                                                        );
-                                                        $('.date_check_list')
-                                                            .find('button[data-value="' + $interval + '"]')
-                                                            .trigger('click');
-                                                    } else {
-                                                        $('.date_check_list')
-                                                            .find('button[data-value="-1"]')
-                                                            .trigger('click');
-                                                    }
-                                                }
+                                    <div class="pagination">
+                                        <div class="pagination">
+                                            <ul></ul>
+                                        </div>
+                                    </div>
+                                    <!-- //pagination -->
 
-                                                // 조회기간 검증
-                                                $('form[name="frmDateSearch"]').submit(function (e) {
-                                                    $chekcInputDate = $('input[name="wDate[]"]');
-                                                    var startDate = ($($chekcInputDate[0]).val()).split('-');
-                                                    startDate = new Date(startDate[0], startDate[1], startDate[2]);
-                                                    var endDate = ($($chekcInputDate[1]).val()).split('-');
-                                                    endDate = new Date(endDate[0], endDate[1], endDate[2]);
+                                </div>
+                                <!-- //mypage_cont -->
 
-                                                    if (startDate > endDate) {
-                                                        alert('종료 날짜가 시작 날짜보다 빠릅니다.\n확인 후 검색기간을 다시 선택해주세요.');
-                                                        return false;
-                                                    }
-                                                });
-                                            </script>
+                            </div>
+                            <!-- //content -->
 
-                                        </body>
+                            <div
+                                id="lyReason"
+                                class="layer_wrap reason_layer dn"
+                                data-remote="../mypage/layer_deposit_reason.php"></div>
 
-                                    </html>
+                            <script type="text/javascript">
+                                $(document).ready(function () {
+                                    $('#formSearch').validate({
+                                        submitHandler: function (form) {
+                                            $('<input />')
+                                                .attr(
+                                                    {"type": "hidden", "name": "regTerm", "value": $('button.on').data('value')}
+                                                )
+                                                .appendTo(form);
+
+                                            //조회기간 검증
+                                            $chekcInputDate = $('input[name="regDt[]"]');
+                                            var startDate = ($($chekcInputDate[0]).val()).split('-');
+                                            startDate = new Date(startDate[0], startDate[1], startDate[2]);
+                                            var endDate = ($($chekcInputDate[1]).val()).split('-');
+                                            endDate = new Date(endDate[0], endDate[1], endDate[2]);
+
+                                            if (startDate > endDate) {
+                                                alert('종료 날짜가 시작 날짜보다 빠릅니다.\n확인 후 검색기간을 다시 선택해주세요.');
+                                                return false;
+                                            }
+
+                                            form.submit();
+                                        }
+                                    });
+
+                                    // 인풋박스 선택 이벤트
+                                    if ($('.js_datepicker').length) {
+                                        $('.js_datepicker').datetimepicker({
+                                            locale: 'ko',
+                                            format: 'YYYY-MM-DD',
+                                            dayViewHeaderFormat: 'YYYY MM',
+                                            viewMode: 'days',
+                                            ignoreReadonly: true,
+                                            debug: false,
+                                            keepOpen: false
+                                        });
+                                    }
+                                    // 기간버튼 선택 이벤트
+                                    if ($('.date_check_list').length) {
+                                        $('.date_check_list button').click(function (e) {
+                                            $startDate = $endDate = '';
+                                            $period = $(this).data('value');
+                                            $elements = $(
+                                                'input[name="' + $(this).closest('.date_check_list').data('target-name') +
+                                                '"]'
+                                            );
+                                            $format = $($elements[0])
+                                                .data('DateTimePicker')
+                                                .format();
+                                            if ($period >= 0) {
+                                                $startDate = moment()
+                                                    .hours(0)
+                                                    .minutes(0)
+                                                    .seconds(0)
+                                                    .subtract($period, 'days')
+                                                    .format($format);
+                                                $endDate = moment()
+                                                    .hours(0)
+                                                    .minutes(0)
+                                                    .seconds(0)
+                                                    .format($format);
+                                            }
+                                            $($elements[0]).val($startDate);
+                                            $($elements[1]).val($endDate);
+                                            $('.date_check_list button').removeClass('on');
+                                            $(this).addClass('on');
+                                        });
+
+                                        // 선택된 버튼에 따른 값 초기화
+                                        $elements = $(
+                                            'input[name*=\'' + $('.date_check_list').data('target-name') + '\']'
+                                        );
+                                        if ($elements.length && $elements.val() != '') {
+                                            $interval = moment($($elements[1]).val()).diff(
+                                                moment($($elements[0]).val()),
+                                                'days'
+                                            );
+                                            $('.date_check_list')
+                                                .find('button[data-value="' + $interval + '"]')
+                                                .trigger('click');
+                                        } else {
+                                            $('.date_check_list')
+                                                .find('button[data-value="-1"]')
+                                                .trigger('click');
+                                        }
+                                    }
+
+                                    // 레이어 오픈 바인딩
+                                    $('.btn_open_layer').bind('click', function (e) {
+                                        e.preventDefault();
+                                        // 일반 레이어 호출
+                                        if ($(this).attr('href') == '#lyReason') {
+                                            gd_call_layer_handler($(this));
+
+                                        }
+                                    });
+
+                                    function gd_call_layer_handler(obj) {
+                                        var target = obj.attr('href');
+                                        var url = $(target).data('remote');
+                                        var params = {
+                                            orderNo: obj
+                                                .closest('tr')
+                                                .data('order-no'),
+                                            handleSno: obj
+                                                .closest('tr')
+                                                .data('order-handlesno')
+                                        };
+
+                                        $(target).empty();
+                                        $.post(url, params, function (data) {
+                                            console.log(data);
+                                            if (!_.isUndefined(data.code) && data.code == 0) {
+                                                alert(data.message);
+                                                gd_close_layer();
+                                                return false;
+                                            }
+                                            $(target)
+                                                .empty()
+                                                .html(data);
+                                            $(target)
+                                                .find('>div')
+                                                .center();
+                                        });
+                                    }
+
+                                });
+
+                                //-->
+                            </script>
+                        </div>
+                        <!-- //sub_content -->
+                    </div>
+                    <!-- //본문 끝 contents -->
+                </div>
+                <!-- //container -->
+            </div>
+        </div>
+        <!-- //layer_wrap -->
+        <!-- //쿠폰등록 레이어 -->
+        <!-- Js Plugins -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+
+</html>

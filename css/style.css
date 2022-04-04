@@ -65,6 +65,7 @@ img {
 	text-align: center;
 }
 
+
 input:focus,
 select:focus,
 button:focus,
@@ -84,11 +85,14 @@ ol {
 	padding: 0;
 	margin: 0;
 }
-
 /*---------------------
   Helper CSS
 -----------------------*/
+/* CSS Document */
 
+#container{margin-top:-1px; border-top:1px solid #cccccc;}
+#contents{min-height:400px; padding:0 0 60px 0;}
+#contents:after{display:block; clear:both; content:"";}
 .section-title {
 	margin-bottom: 50px;
 	text-align: center;
@@ -3358,7 +3362,28 @@ ol {
 #join_finish .btn {
     margin-top: 30px;
 }
-
+.mypage_cont .btn_date_check {
+    /*display:inline-block;*/
+    float: left;
+    min-width: 100px;
+    height: 31px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #5B995B;
+    background: #5B995B;
+    text-align: center;
+}
+.mypage_cont .btn_date_check:hover {
+    border: 1px solid #5B995B;
+    background: #5B995B;
+}
+.mypage_cont .btn_date_check em {
+    padding: 0 20px 0 0;
+    background-image: url("../img/btn_search.png");
+    background-position: right 3px;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
 .box_btn {
     display: inline-block;
     text-align: center;
@@ -3806,6 +3831,35 @@ ol {
 .price_sum_cont .price_sum_list span{display:table-cell; padding:0 15px 0 15px; text-align:center; vertical-align:middle;}
 .price_sum_cont .tobe_mileage{display:block; width:100%;}
 
+.btn_gray_list a,
+.btn_gray_list button{display:inline-block; padding:0 0 0 11px; background:url('../img/common/btn/btn_gray_bg.png') repeat-x; border:1px solid #dbdbdb; vertical-align:middle;}
+.btn_gray_list a em,
+.btn_gray_list button em{display:inline-block; padding:0px 20px 0 0; background:url('../img/common/btn/btn_gray_bg.png') no-repeat right top;}
+.btn_gray_list a span,
+.btn_gray_list button span{display:inline-block; padding:0px 12px 0 0;}
+.btn_gray_list a:hover,
+.btn_gray_list button:hover{background:#f8f8f8;}
+.btn_gray_list button em{margin-top:-2px;}
+
+.btn_gray_list .btn_gray_small{font-size:11px; background:url('../img/common/btn/btn_gray_bg_02.png') repeat-x bottom;}
+.btn_gray_list .btn_gray_small em{background-position:right 1px; line-height:22px;}
+.btn_gray_list .btn_gray_small em.icon_download{padding:0px 30px 0 0; background-position:right -22px;}
+.btn_gray_list .btn_gray_small span{line-height:22px;}
+.btn_gray_list .btn_gray_mid{height:26px; background-position:0 -70px;}
+.btn_gray_list .btn_gray_mid em{background-position:right -69px; line-height:26px;}
+.btn_gray_list .btn_gray_mid span{line-height:26px;}
+.btn_gray_list .btn_gray_mid em.icon_download{padding:0px 30px 0 0; background-position:right -93px;}
+.btn_gray_list .btn_gray_big{height:31px; background-position:0 -140px;}
+.btn_gray_list .btn_gray_big em{background-position:right -139px; line-height:31px;}
+.btn_gray_list .btn_gray_big span{line-height:31px;}
+.btn_gray_list .style-none { border: 0px; padding: 0px; vertical-align: baseline; background: none !important; }
+
+.btn_center_box button{margin:0 2px 0 3px;}
+
+.btn_center_box button + button,
+.btn_left_box button + button,
+.btn_right_box button + button{margin-left:6px;}
+
 /* 장바구니 버튼 영역 */
 .btn_order_box{overflow:hidden; padding:30px 0 0 0; text-align:right;}
 .btn_order_box .btn_left_box{float:left;}
@@ -3863,6 +3917,7 @@ ol {
 
 /* --------- 배송정보 --------- */
 /* 배송지확인 */
+.btn_layer{position:relative; display:inline-block;}
 .order_cont table > ul{display:inline-block; vertical-align:middle;}
 .order_cont table  > ul > li{display:inline-block; padding:0 30px 0 0;}
 .order_cont table ul .btn_gray_list{display:inline-block;}

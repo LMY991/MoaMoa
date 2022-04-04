@@ -133,6 +133,90 @@
             #order .area_right .btn .box_btn {
                 margin-bottom: 10px;
             }
+            .info_main_box{
+                border: 2px solid rgb(231, 231, 231);
+                background-color: rgb(255, 255, 255);
+                width: 100%;
+                height: 300px;
+                margin-bottom: 30px;
+                padding: 30px;
+            }
+            .info_main_box_con{
+                float: left;
+                text-align: center;
+                padding: 0 32px;
+                margin-top: 12px;
+            }
+            .info_delivery_box{
+                border: 2px solid rgb(231, 231, 231);
+                background-color: white;
+                width: 100%;
+                height: 250px;
+                padding: 30px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            .info_delivery_box_con{
+                float: left;
+                margin: 10px;
+                padding-left: 20px;
+            }
+            .delivery_icon{
+                width: 60px;
+                height: 60px;
+                margin: 10px;
+            }
+            .info_line{
+                float: left;
+            }
+            .info_menu{
+                width: 180px;
+                height: 800px;
+                margin: 20px;
+            }
+            .info_boxs{
+                width: 500px;
+                height: 400px;
+                background-color: rgb(206, 206, 206);
+                margin: 0 auto;
+                padding: 30px;
+            }
+            .info_box{
+                background-color: rgb(240, 240, 240);
+                padding: 40px;
+                width: 200px;
+                height: 300px;
+                margin: 0 10px;
+                float:left;
+                text-align: center;
+            }
+            .profile_box{
+                width: 80px;
+                height: 80px;
+                border-radius: 70%;
+                overflow: hidden;
+                margin: 10px;
+            }
+            .profile{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .info_button{
+                margin: 10px;
+            }
+            span{
+                color: black;
+            }
+            ul{
+                list-style: none;
+                font-weight: bold;
+            }
+            .in_li{
+                padding-left: 10px;
+                font-size: medium;
+                font-weight: normal;
+            }
         </style>
         <!-- Page Preloder -->
         <div id="preloder">
@@ -295,7 +379,7 @@
                                                         <span>브론즈등급</span>
                                                         입니다.
                                                         <div class="btn_layer">
-                                                                <input class="info_button" type="button" style="float: none;" value="등급혜택보기">
+                                                            <input class="info_button" type="button" style="float: none;" value="등급혜택보기">
                                                             <!-- N : 회원등급혜택 레이어 시작 -->
                                                             <div id="lyGrade" class="layer_area" style="display:none;">
                                                                 <div class="ly_wrap grade_layer">
@@ -373,14 +457,6 @@
                                                                     <strong>0</strong>
                                                                 </a>원</span>
                                                         </li>
-                                                        <!-- seum 210916 셰프멤버스 버튼 추가-->
-                                                        <li class="btn_chef">
-                                                            <span><img
-                                                                src="/data/skin/front/udweb_pc_20200903/img/icon/mypage/icon_balance.png"
-                                                                alt=""></span>
-                                                    
-                                                        </li>
-                                                        <!-- //seum 210916 셰프멤버스 버튼 추가-->
                                                     </ul>
                                                 </div>
                                                 <!-- //mypage_top_wallet -->
@@ -393,11 +469,12 @@
 
                                     <div class="mypage_lately_info">
                                         <div class="mypage_zone_tit">
-                                            <h3>주문목록/배송조회</h3>
+                                            <h3>환불/입금 내역</h3>
                                         </div>
 
                                         <div class="date_check_box">
                                             <form method="get" name="frmDateSearch">
+                                                <input type="hidden" name="mode" value="refund">
                                                 <h3>
                                                     조회기간
                                                 </h3>
@@ -407,7 +484,7 @@
                                                     <button type="button" data-value="15">15일</button>
                                                     <button type="button" data-value="30">1개월</button>
                                                     <button type="button" data-value="90">3개월</button>
-                                                    <button type="button" class="oneYear" data-value="365">1년</button>
+                                                    <button type="button" data-value="365">1년</button>
                                                 </div>
                                                 <!-- //date_check_list -->
                                                 <div class="date_check_calendar">
@@ -416,29 +493,30 @@
                                                         id="picker2"
                                                         name="wDate[]"
                                                         class="anniversary js_datepicker"
-                                                        value="2022-03-13">
+                                                        value="2022-03-19">
                                                     ~
                                                     <input
                                                         type="text"
                                                         name="wDate[]"
                                                         class="anniversary js_datepicker"
-                                                        value="2022-03-20">
+                                                        value="2022-03-26">
                                                 </div>
                                                 <!-- //date_check_calendar -->
 
-                                                <button type="submit" class="btn_date_check">
-                                                    조회
-                                                </button>
+                                                <button type="submit" class="btn_date_check">조회</button>
                                             </form>
+
                                         </div>
                                         <!-- //date_check_box -->
 
                                         <div class="mypage_lately_info_cont">
+
                                             <span class="pick_list_num">
-                                                주문목록 / 배송조회 내역 총
+                                                환불/입금 내역 총
                                                 <strong>0</strong>
                                                 건
                                             </span>
+
                                             <!-- 주문상품 리스트 -->
                                             <div class="mypage_table_type">
                                                 <table>
@@ -550,7 +628,6 @@
                                                     }
                                                 });
                                             </script>
-
                                         </body>
 
                                     </html>
