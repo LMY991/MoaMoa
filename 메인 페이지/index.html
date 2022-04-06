@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ogani Template">
+        <meta name="keywords" content="Ogani, unica, creative, html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>RECIPE MOA MOA</title>
+
+        <!-- Google Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
+            rel="stylesheet">
+
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+        <link rel="stylesheet" href="../css/nice-select.css" type="text/css">
+        <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css">
+        <link rel="stylesheet" href="../css/" type="text/css">
+        <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
+        <!--로그인 팝업창 관련 css, jquery 코드-->
+        <link rel="stylesheet" href="../css/문의하기/inquire_style.css" type="text/css">
+        <link rel="stylesheet" href="../css/문의하기/inquire_default.css" type="text/css">
+        <!--로그인 팝업창 div 코드 css 파일-->
+        <link rel="stylesheet" href="../css/로그인,회원가입/logindiv_default2.css" type="text/css">
+        <link rel="stylesheet" href="../css/로그인,회원가입/logindiv_style2.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type>
+$(document).ready(function(){
+	
+	$(".open").on('click',function(){
+		$(".popup").show();
+		$(".dim").show();
+	});
+	$(".popup .close").on('click',function(){
+		$(this).parent().hide();
+		$(".dim").hide();
+	});
+});
+</script>
+    </head>
+
+    <body>
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__left">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-envelope"></i>
+                                        hello@bc.kr</li>
+                                    <li>10000원 이상 무료배송</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__right">
+                                <div class="header__top__right__social">
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="header__top__right__auth" class="open">
+                                    <a href="#a" class="open">
+                                        <i class="fa fa-user"></i>
+                                        개인&nbsp;&nbsp;</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="#a" class="open">
+                                        기업&nbsp;&nbsp;</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="#a" class="open">
+                                        운영자</a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a>
+                                        ← 로그인</a> <!--이민영- 로그인하는 곳인 것을 알 수 있게 화살표 추가-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--이민영: 로그인 팝업창 div 코드 작성-->
+            <div class="popup">
+                <body>
+                    <section class="login">
+                      <h2>로그인</h2>
+                      <ul>
+                        <li><input type="text" placeholder="아이디" title="아이디입력"></li>
+                        <li><input type="password" placeholder="비밀번호" title="비밀번호입력"></li>
+                        <li><input type="checkbox" id="chk_id"><label for="chk_id">아이디저장</label></li>
+                        <li><button>로그인</button></li>
+                      </ul>
+                      <div>
+                        <ul>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">아이디 찾기</a></li>
+                        <li><a href="">비밀번호 찾기</a></li>
+                        </ul>
+                      </div>
+                      <a href="">비회원 주문조회</a>
+                    </section>
+                  </body>
+            </div>
+            <div class="dim"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="header__logo">
+                            <a href=""><img src="../img/logo2.png" alt="" height="50px" width="500px"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active">
+                                    <a href="../메인 페이지/index.html">홈</a>
+                                </li>
+                                <li>
+                                    <a href="../개인,기업 공통페이지/shop-grid.html">제품</a>
+                                </li>
+                                <li>
+                                    <a href="../개인,기업 공통페이지/order.html">주문하기</a>
+                                </li>
+                                <li>
+                                    <a href="../개인,기업 공통페이지/post.html">블로그</a>
+                                    <ul class="header__menu__dropdown">
+                                        <li>
+                                            <a href="../개인,기업 공통페이지/post.html">밀키트</a>
+                                        </li>
+                                        <li>
+                                            <a href="../개인,기업 공통페이지/post.html">자유</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../개인페이지/inquire.html">고객센터</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header__cart">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        <span>1</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-bag"></i>
+                                        <span>3</span></a>
+                                </li>
+                            </ul>
+                            <div class="header__cart__price">총 주문가격 :
+                                <span>15000원</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="humberger__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <!-- Header Section End -->
+
+        <!-- Hero Section Begin -->
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="hero__categories">
+                            <div class="hero__categories__all">
+                                <i class="fa fa-bars"></i>
+                                <span>카테고리</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">한식</a>
+                                </li>
+                                <li>
+                                    <a href="#">양식</a>
+                                </li>
+                                <li>
+                                    <a href="#">일식</a>
+                                </li>
+                                <li>
+                                    <a href="#">증식</a>
+                                </li>
+                                <li>
+                                    <a href="#">기타</a>
+                                </li>
+                                <li>
+                                    <a href="#">디저트</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="hero__search">
+                            <div class="hero__search__form">
+                                <form action="#">
+                                    <input type="text" placeholder="무엇을 검색하시겠습니까?">
+                                    <button type="submit" class="site-btn">찾기</button>
+                                </form>
+                            </div>
+                            <div class="hero__search__phone">
+                                <div class="hero__search__phone__icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="hero__search__phone__text">
+                                    <h5>032-456-789</h5>
+                                    <span>24시간</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero__item set-bg" data-setbg="../img/hero/banner.jpg">
+                            <div class="hero__text">
+                                <span>신선한 밀키트</span>
+                                <h2>재료
+                                    <br/>100% 유기농</h2>
+                                <p>배달 가능</p>
+                                <a href="#" class="primary-btn">지금 주문하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- Categories Section Begin -->
+        <section class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="categories__slider owl-carousel">
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/categories/cat-1.jpg">
+                                <h5>
+                                    <a href="#">한식</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/categories/cat-2.jpg">
+                                <h5>
+                                    <a href="#">중식</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/categories/cat-3.jpg">
+                                <h5>
+                                    <a href="#">일식</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/categories/cat-4.jpg">
+                                <h5>
+                                    <a href="#">양식</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="categories__item set-bg" data-setbg="../img/categories/cat-5.jpg">
+                                <h5>
+                                    <a href="#">디저트</a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Categories Section End -->
+
+        <!-- Featured Section Begin -->
+        <section class="featured spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>제품 종류</h2>
+                        </div>
+                        <div class="featured__controls">
+                            <ul>
+                                <li class="active" data-filter="*">모두</li>
+                                <li data-filter=".korean">한식</li>
+                                <li data-filter=".western">양식</li>
+                                <li data-filter=".chinese">중식</li>
+                                <li data-filter=".japanese">일식</li>
+                                <li data-filter=".dessert">디저트</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row featured__filter">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix korean">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-1.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">비빔밥</a>
+                                </h6>
+                                <h5>4500원</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix western">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-2.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">까르보나라</a>
+                                </h6>
+                                <h5>5000원</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix dessert">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-3.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">피치레몬에이드</a>
+                                </h6>
+                                <h5>3500원</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix chinese">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-4.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">크림세우</a>
+                                </h6>
+                                <h5>4000원</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix chinese">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-5.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">짜장면</a>
+                                </h6>
+                                <h5>4000원</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix japanese">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-6.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">연어초밥</a>
+                                </h6>
+                                <h5>7000원</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix korean">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-7.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">떡볶이</a>
+                                </h6>
+                                <h5>3000원</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix dessert">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="../img/featured/pd-8.jpg">
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6>
+                                    <a href="#">체리콬</a>
+                                </h6>
+                                <h5>3500원</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Section End -->
+
+        <!-- Banner Begin -->
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="banner__pic">
+                            <img src="../img/banner/banner-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="banner__pic">
+                            <img src="../img/banner/banner-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
+
+        <!-- Latest Product Section Begin -->
+        <section class="latest-product spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="latest-product__text">
+                            <h4>조회수</h4>
+                            <div class="latest-product__slider owl-carousel">
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-1.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>토마토스파게티</h6>
+                                            <span>4000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-2.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>스테이크</h6>
+                                            <span>8000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-3.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>불고기</h6>
+                                            <span>6000원</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-1.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>토마토스파게티</h6>
+                                            <span>4000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-2.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>스테이크</h6>
+                                            <span>8000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src=../"img/latest-product/lp-3.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>불고기</h6>
+                                            <span>6000원</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="latest-product__text">
+                            <h4>좋아요</h4>
+                            <div class="latest-product__slider owl-carousel">
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-1.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>토마토스파게티</h6>
+                                            <span>4000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-2.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>스테이크</h6>
+                                            <span>8000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-3.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>불고기</h6>
+                                            <span>6000원</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-1.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>토마토스파게티</h6>
+                                            <span>4000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-2.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>스테이크</h6>
+                                            <span>8000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-3.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>불고기</h6>
+                                            <span>6000원</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="latest-product__text">
+                            <h4>댓글</h4>
+                            <div class="latest-product__slider owl-carousel">
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-1.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>토마토스파게티</h6>
+                                            <span>4000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-2.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>스테이크</h6>
+                                            <span>8000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-3.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>불고기</h6>
+                                            <span>6000원</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-1.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>스파게티</h6>
+                                            <span>4000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-2.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>스테이크</h6>
+                                            <span>8000원</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="../img/latest-product/lp-3.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>불고기</h6>
+                                            <span>6000원</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest Product Section End -->
+
+        <!-- Blog Section Begin -->
+        <section class="from-blog spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title from-blog__title">
+                            <h2>블로그</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="../img/blog/blog-1.jpg" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-calendar-o"></i>
+                                       2022-03-12</li>
+                                    <li>
+                                        <i class="fa fa-comment-o"></i>
+                                        5</li>
+                                </ul>
+                                <h5>
+                                    <a href="#">전복죽</a>
+                                </h5>
+                                <p>전복죽 레시피
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="../img/blog/blog-2.jpg" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-calendar-o"></i>
+                                        2022-03-12</li>
+                                    <li>
+                                        <i class="fa fa-comment-o"></i>
+                                        5</li>
+                                </ul>
+                                <h5>
+                                    <a href="#">피자</a>
+                                </h5>
+                                <p>피자 레시피
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="../img/blog/blog-3.jpg" alt="">
+                            </div>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-calendar-o"></i>
+                                        2022-03-12</li>
+                                    <li>
+                                        <i class="fa fa-comment-o"></i>
+                                        5</li>
+                                </ul>
+                                <h5>
+                                    <a href="#">제육볶음</a>
+                                </h5>
+                                <p>제육볶음 레시피
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section End -->
+
+        <!-- Footer Section Begin -->
+        <footer class="footer spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer__about">
+                            <div class="footer__about__logo">
+                                <a href=""><img src="../img/logo.png" alt=""></a>
+                            </div>
+                            <ul>
+                                <li>주소 : 경기도 부천시 신흥로 56번길 25(심곡동)</li>
+                                <li>전화번호: 032-610-0114</li>
+                                <li>이메일 : hello@bc.kr</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                        <div class="footer__widget">
+                            <h6>유용한 링크</h6>
+                            <ul>
+                                <li>
+                                    <a href="#">우리 회사에 대해서</a>
+                                </li>
+                                <li>
+                                    <a href="#">우리 쇼핑몰에 대해서</a>
+                                </li>
+                                <li>
+                                    <a href="#">쇼핑몰 보안</a>
+                                </li>
+                                <li>
+                                    <a href="#">배달 정보</a>
+                                </li>
+                                <li>
+                                    <a href="#">보안 정책</a>
+                                </li>
+                                <li>
+                                    <a href="#">우리의 사이트</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">우리가 누구</a>
+                                </li>
+                                <li>
+                                    <a href="#">우리의 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="#">프로젝트</a>
+                                </li>
+                                <li>
+                                    <a href="#">고객센터</a>
+                                </li>
+                                <li>
+                                    <a href="#">이노베이션</a>
+                                </li>
+                                <li>
+                                    <a href="#">사용후기</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__widget">
+                            <div class="footer__widget__social">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer__copyright">
+                            <div class="footer__copyright__text">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY
+                                    3.0. -->
+                                    Copyright &copy;<script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    All rights reserved | This template is made with
+                                    <i class="fa fa-heart" aria-hidden="true"></i>
+                                    by
+                                    <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY
+                                    3.0. -->
+                                </p>
+                            </div>
+                            <div class="footer__copyright__payment"><img src="../img/payment-item.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+
+        <!-- Js Plugins -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>    
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.nice-select.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery.slicknav.js"></script>
+        <script src="../js/mixitup.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/main.js"></script>
+
+    </body>
+
+</html>
