@@ -50,7 +50,7 @@
   vertical-align: -5px;
 }
 .login > ul li input[type="checkbox"]:checked + label:before {
-  background: url(../images/ico_check_on.png) no-repeat center #333;
+  background: url(../../img/ico_check_on.png) no-repeat center #333;
   border-color: #333;
 }
 .login button {

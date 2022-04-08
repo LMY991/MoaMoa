@@ -31,7 +31,7 @@ body {
   top: 40px;
   width: 41px;
   height: 41px;
-  background: url(../img/btn-close.png) no-repeat;
+  background: url(../../img/btn-close.png) no-repeat;
   color: transparent;
 }
 .popup .con {

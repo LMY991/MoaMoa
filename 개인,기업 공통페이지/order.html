@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
         <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="../css/style.css" type="text/css">
-        <link rel="stylesheet" href="../css/마이페이지/mypage.css" type="type/css">
     </head>
 
     <body>
@@ -191,144 +190,79 @@
                         </div>
                         <div class="content">
                             <div class="mypage_cont">
-                        
-                                <!-- 마이페이지 회원 요약정보 -->
-                                <div class="seum_kcp">
-                            <div>
-                        <div class="mypage_top_info">
-                            <div class="mypage_top_txt">
-                                <div class="grade_txt">
-                                    <p>장채윤님의</p><p> 회원등급은 <span>화이트등급</span> 입니다.
-                                    <div class="btn_layer">
-                                        <input class="info_button" type="button" style="float: none;" value="등급혜택보기">                        
-                                        <!-- N : 회원등급혜택 레이어 시작 -->
-                                        <div id="lyGrade" class="layer_area" style="display:none;">
-                                            <div class="ly_wrap grade_layer">
-                                                <div class="ly_tit">
-                                                    <strong>등급혜택 안내</strong>
-                                                </div>
-                                                <div class="ly_cont">
-                                                    <div class="grade_list">
+                                <div class="content_box">
+                                    <div class="order_wrap">
+                                        <div class="order_tit">
+                                            <h2>장바구니</h2>
+                                            <ol>
+                                                <li class="page_on"><span>01</span> 장바구니 <span><img src="/data/skin/front/udweb_pc_20200903/img/member/icon_join_step_on.png" alt=""></span></li>
+                                                <li><span>02</span> 주문서작성/결제<span><img src="/data/skin/front/udweb_pc_20200903/img/member/icon_join_step_off.png" alt=""></span></li>
+                                                <li><span>03</span> 주문완료</li>
+                                            </ol>
+                                        </div>
+                                        <!-- //order_tit -->
+                                
+                                        <div class="cart_cont">
+                                
+                                            <form id="frmCart" name="frmCart" method="post" target="ifrmProcess">
+                                                <input type="hidden" name="mode" value=""/>
+                                                <input type="hidden" name="cart[cartSno]" value=""/>
+                                                <input type="hidden" name="cart[goodsNo]" value=""/>
+                                                <input type="hidden" name="cart[goodsCnt]" value=""/>
+                                                <input type="hidden" name="cart[addGoodsNo]" value=""/>
+                                                <input type="hidden" name="cart[addGoodsCnt]" value=""/>
+                                                <input type="hidden" name="cart[couponApplyNo]" value=""/>
+                                                <input type="hidden" name="useBundleGoods" value="1" />
+                                                <!-- 장바구니 상품리스트 시작 -->
+                                
+                                                <!-- //cart_cont_list -->
+                                                <!-- 장바구니 상품리스트 끝 -->
+                                
+                                                <p class="no_data">장바구니에 담겨있는 상품이 없습니다.</p>
+                                
+                                            </form>
+                                
+                                            <div class="price_sum">
+                                                <div class="price_sum_cont">
+                                                    <div class="price_sum_list">
                                                         <dl>
-                                                            <dt>회원 등급</dt>
-                                                            <dd>화이트등급</dd>
+                                                            <dt>총 <strong id="totalGoodsCnt">0</strong> 개의 상품금액 </dt>
+                                                            <dd><strong id="totalGoodsPrice">0</strong>원</dd>
                                                         </dl>
+                                                        <span><img src="./img/order_price_plus.png" alt="더하기" /></span>
                                                         <dl>
-                                                            <dt>추가 할인</dt>
-                                                            <dd><strong>0원이상 구매시 상품 판매금액의 0.0% 추가 할인</strong></dd>
+                                                            <dt>배송비</dt>
+                                                            <dd><strong id="totalDeliveryCharge">0</strong>원</dd>
                                                         </dl>
-                                                        <dl>
-                                                            <dt>중복 할인</dt>
-                                                            <dd><strong>0원이상 구매시 상품 판매금액의 0.0% 추가 할인</strong></dd>
-                                                        </dl>
-                                                        <dl>
-                                                            <dt>추가  적립</dt>
-                                                            <dd>0원이상 구매 시 구매금액당 0.0% 추가 적립</dd>
+                                                        <span><img src="./img/order_price_total.png" alt="합계" /></span>
+                                                        <dl class="price_total">
+                                                            <dt>합계</dt>
+                                                            <dd><strong id="totalSettlePrice">0</strong>원
+                                                            </dd>
                                                         </dl>
                                                     </div>
+                                                    <em id="deliveryChargeText" class="tobe_mileage"></em>
+                                                    <em class="tobe_mileage">적립예정 적립금 : <span id="totalGoodsMileage">0</span> 원</em>
                                                 </div>
-                                                <!-- //ly_cont -->
-                                                <a href="#lyGrade" class="ly_close"><img src="/data/skin/front/udweb_pc_20200903/img/common/layer/btn_layer_close.png" alt="닫기"></a>
+                                                <!-- //price_sum_cont -->
                                             </div>
-                                            <!-- //ly_wrap -->
+                                            <!-- //price_sum -->
+                                
                                         </div>
-                                        <!-- N : 회원등급혜택 레이어 끝 -->
-                        
+                                        <!-- //cart_cont -->
                                     </div>
+                                    <!-- //order_wrap -->
                                 </div>
-                                <!-- //grade_txt -->
-                            </div>
-                            <!-- //mypage_top_txt -->
-                        
-                            <div class="mypage_top_wallet">
-                                <ul>
-                                    <li>
-                                        <span><img src="/data/skin/front/udweb_pc_20200903/img/icon/mypage/icon_coupon.png" alt=""></span>
-                                        <span><em>쿠폰</em><a href="../mypage/coupon.php"><strong>1</strong></a>장</span>
-                                    </li>
-                                    <li>
-                                        <span><img src="/data/skin/front/udweb_pc_20200903/img/icon/mypage/icon_mileage.png" alt=""></span>
-                                        <span><em>적립금</em><a href="../mypage/mileage.php"><strong>0</strong></a>원</span>
-                                    </li>
-                                    <li>
-                                        <span><img src="/data/skin/front/udweb_pc_20200903/img/icon/mypage/icon_balance.png" alt=""></span>
-                                        <span><em>예치금</em><a href="../mypage/deposit.php"><strong>0</strong></a>원</span>
-                                    </li>
-                                    <!-- seum 210916 셰프멤버스 버튼 추가-->
-                                </ul>
-                            </div>
-                            <!-- //mypage_top_wallet -->
-                        
-                        </div>
-                        <!-- //mypage_top_info -->
-                        </div>
-                        </div>
-                                <!-- 마이페이지 회원 요약정보 -->
-                        
-                                <div class="mypage_lately_info">
-                                    <div class="mypage_zone_tit">
-                                        <h3>주문취소/반품/교환</h3>
-                                    </div>
-                        
-                                    <div class="date_check_box">
-                                        <form method="get" name="frmDateSearch">
-                                            <input type="hidden" name="mode" value="cancel">
-                                            <h3> 조회기간 </h3>
-                                            <div class="date_check_list" data-target-name="wDate[]">
-                                                <button type="button" data-value="0">오늘</button>
-                                                <button type="button" data-value="7">7일</button>
-                                                <button type="button" data-value="15">15일</button>
-                                                <button type="button" data-value="30">1개월</button>
-                                                <button type="button" data-value="90">3개월</button>
-                                                <button type="button" data-value="365">1년</button>
-                                            </div>
-                                            <!-- //date_check_list -->
-                                            <div class="date_check_calendar">
-                                                <input type="text" id="picker2" name="wDate[]" class="anniversary js_datepicker" value="2022-03-19"> ~ <input type="text" name="wDate[]" class="anniversary js_datepicker" value="2022-03-26">
-                                            </div>
-                                            <!-- //date_check_calendar -->
-                        
-                                            <button type="submit" class="btn_date_check">조회</button>
-                                        </form>
-                        
-                                    </div>
-                                    <!-- //date_check_box -->
-                        
-                                    <div class="mypage_lately_info_cont">
-                        
-                                        <span class="pick_list_num">
-                                            취소/반품/교환 내역 총 <strong>0</strong> 건
-                                        </span>
-                        
-                                        <!-- 주문상품 리스트 -->
-                                        <div class="mypage_table_type">
-                            <table>
-                                <colgroup>
-                                    <col style="width:15%"> <!-- 날짜/주문번호 -->
-                                    <col>					<!-- 상품명/옵션 -->
-                                    <col style="width:15%"> <!-- 상품금액/수량 -->
-                                    <col style="width:15%"> <!-- 주문상태 -->
-                                    <col style="width:15%"> <!-- 확인/리뷰 -->
-                                </colgroup>
-                                <thead>
-                                <tr>
-                                    <th>날짜/주문번호</th>
-                                    <th>상품명/옵션</th>
-                                    <th>상품금액/수량</th>
-                                    <th>주문상태</th>
-                                    <th>
-                                        확인/리뷰
-                                    </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                        
-                                <tr>
-                                    <td colspan="6"><p class="no_data">조회내역이 없습니다.</p></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                <!-- //content_box -->
+                                
+                                <!-- 쿠폰 적용하기 레이어 -->
+                                <div id="couponApplyLayer" class="layer_wrap coupon_apply_layer dn"></div>
+                                <!--//쿠폰 적용하기 레이어 -->
+                                
+                                <!-- 옵션 변경하기 레이어 -->
+                                <div id="optionViewLayer" class="layer_wrap dn"></div>
+                                <!-- 옵션 변경하기 레이어 -->
+
                                             <!-- Js Plugins -->
                                             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                                             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
