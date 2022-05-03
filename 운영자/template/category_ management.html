@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Recipe Moa Milkit</title>
+        <!-- plugins:css -->
+        <link
+            rel="stylesheet"
+            href="assets/vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <!-- End Plugin css for this page -->
+        <!-- inject:css -->
+        <!-- endinject -->
+        <!-- Layout styles -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- End layout styles -->
+        <link rel="shortcut icon" href="assets/images/logo.png"/>
+    </head>
+    <body>
+        <div class="container-scroller">
+            <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <div
+                    class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                    <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.png" alt="logo"/></a>
+                    <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo.png" alt="logo"/></a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item profile">
+                        <div class="profile-desc">
+                            <div class="profile-pic">
+                                <div class="count-indicator">
+                                    <img class="img-xs rounded-circle " src="assets/images/faces/mychar.png" alt="">
+                                    <span class="count bg-success"></span>
+                                </div>
+                                <div class="profile-name">
+                                    <h5 class="mb-0 font-weight-normal">장채윤</h5>
+                                    <span>관리자</span>
+                                </div>
+                            </div>
+                            <a href="#" id="profile-dropdown" data-toggle="dropdown">
+                                <i class="mdi mdi-dots-vertical"></i>
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
+                                aria-labelledby="profile-dropdown">
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-onepassword  text-info"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1 text-small">비밀번호 변경</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-category">
+                        <span class="nav-link">메뉴</span>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a
+                            class="nav-link"
+                            data-toggle="collapse"
+                            href="#ui-basic"
+                            aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-laptop"></i>
+                            </span>
+                            <span class="menu-title">콘텐츠</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="post_ management.html">글 관리</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="category_ management.html">카테고리 관리</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="notifi_management.html">공지 관리</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="client_management.html">고객 관리</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="event_management.html">이벤트 관리</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" href="manage_comments.html">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-playlist-play"></i>
+                            </span>
+                            <span class="menu-title">댓글 관리</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" href="chart.html">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-chart-bar"></i>
+                            </span>
+                            <span class="menu-title">통계</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:../../partials/_navbar.html -->
+                <nav class="navbar p-0 fixed-top d-flex flex-row">
+                    <div
+                        class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo.png" alt="logo"/></a>
+                    </div>
+                    <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                        <button
+                            class="navbar-toggler navbar-toggler align-self-center"
+                            type="button"
+                            data-toggle="minimize">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                        <ul class="navbar-nav w-100">
+                            <li class="nav-item w-100">
+                                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                                    <input type="text" class="form-control" placeholder="검색">
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item dropdown border-left">
+                                <a
+                                    class="nav-link count-indicator dropdown-toggle"
+                                    id="messageDropdown"
+                                    href="#"
+                                    data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="mdi mdi-email"></i>
+                                    <span class="count bg-success"></span>
+                                </a>
+                                <div
+                                    class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                                    aria-labelledby="messageDropdown">
+                                    <h6 class="p-3 mb-0">메시지</h6>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-thumbnail">
+                                            <img
+                                                src="assets/images/faces/face4.jpg"
+                                                alt="image"
+                                                class="rounded-circle profile-pic">
+                                        </div>
+                                        <div class="preview-item-content">
+                                            <p class="preview-subject ellipsis mb-1">준면이 문의 메시지를 보냄</p>
+                                            <p class="text-muted mb-0">
+                                                1 분전
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-thumbnail">
+                                            <img
+                                                src="assets/images/faces/face2.jpg"
+                                                alt="image"
+                                                class="rounded-circle profile-pic">
+                                        </div>
+                                        <div class="preview-item-content">
+                                            <p class="preview-subject ellipsis mb-1">성재가 문의 메시지를 보냄</p>
+                                            <p class="text-muted mb-0">
+                                                15 분전
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-thumbnail">
+                                            <img
+                                                src="assets/images/faces/face3.jpg"
+                                                alt="image"
+                                                class="rounded-circle profile-pic">
+                                        </div>
+                                        <div class="preview-item-content">
+                                            <p class="preview-subject ellipsis mb-1">지수가 문의 메시지를 보냄</p>
+                                            <p class="text-muted mb-0">
+                                                18 분전
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <p class="p-3 mb-0 text-center">4개의 새로운 메시지</p>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown border-left">
+                                <a
+                                    class="nav-link count-indicator dropdown-toggle"
+                                    id="notificationDropdown"
+                                    href="#"
+                                    data-toggle="dropdown">
+                                    <i class="mdi mdi-bell"></i>
+                                    <span class="count bg-danger"></span>
+                                </a>
+                                <div
+                                    class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                                    aria-labelledby="notificationDropdown">
+                                    <h6 class="p-3 mb-0">알림</h6>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-thumbnail">
+                                            <div class="preview-icon bg-dark rounded-circle">
+                                                <i class="mdi mdi-calendar text-success"></i>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item-content">
+                                            <p class="preview-subject mb-1">이벤트 관리</p>
+                                            <p class="text-muted ellipsis mb-0">
+                                                이벤트에 대한 관리
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-thumbnail">
+                                            <div class="preview-icon bg-dark rounded-circle">
+                                                <i class="mdi mdi-settings text-danger"></i>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item-content">
+                                            <p class="preview-subject mb-1">설정</p>
+                                            <p class="text-muted ellipsis mb-0">
+                                                설정
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-thumbnail">
+                                            <div class="preview-icon bg-dark rounded-circle">
+                                                <i class="mdi mdi-link-variant text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item-content">
+                                            <p class="preview-subject mb-1">고객 관리</p>
+                                            <p class="text-muted ellipsis mb-0">
+                                                새로운 고객 관리
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <p class="p-3 mb-0 text-center">더 보기</p>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                                    <div class="navbar-profile">
+                                        <img class="img-xs rounded-circle" src="assets/images/faces/mychar.png" alt="">
+                                        <p class="mb-0 d-none d-sm-block navbar-profile-name">장채윤</p>
+                                        <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                                    </div>
+                                </a>
+                                <div
+                                    class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                                    aria-labelledby="profileDropdown">
+                                    <h6 class="p-3 mb-0">프로필</h6>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-thumbnail">
+                                            <div class="preview-icon bg-dark rounded-circle">
+                                                <i class="mdi mdi-logout text-danger"></i>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item-content">
+                                            <p class="preview-subject mb-1">로그아웃</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <button
+                            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+                            type="button"
+                            data-toggle="offcanvas">
+                            <span class="mdi mdi-format-line-spacing"></span>
+                        </button>
+                    </div>
+                </nav>
+                <!-- partial -->
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                        <div class="page-header">
+                            <h3 class="page-title">
+                                카테고리 관리
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="add-items d-flex">
+                                            <input
+                                                type="text"
+                                                class="form-control todo-list-input"
+                                                placeholder="카테고리"
+                                                id="category">
+                                            <button class="add btn btn-primary todo-list-add-btn">+</button>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="form-check form-check-muted m-0">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                </label>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            카테고리
+                                                        </th>
+                                                        <th>
+                                                            등록 날짜
+                                                        </th>
+                                                        <th>
+                                                            카테고리 개수</th>
+                                                        <th>
+                                                            수정</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check form-check-muted m-0">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                </label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            한식
+                                                        </td>
+                                                        <td>
+                                                            2022-04-27
+                                                        </td>
+                                                        <td>
+                                                            56 개</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-outline-primary btn-fw">
+                                                                수정
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="btn-modify_delete" style="float: right;">
+                                                <button type="button" class="btn btn-outline-danger btn-fw">
+                                                    삭제
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:../../partials/_footer.html -->
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+        <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Recipe_Moa_Milkit 2020</span>
+            </div>
+        </footer>
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <!-- endinject -->
+</body>
+</html>
