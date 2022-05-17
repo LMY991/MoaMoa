@@ -29,20 +29,7 @@
         <!--로그인 팝업창 div 코드 css 파일-->
         <link rel="stylesheet" href="../css/login_signup/logindiv_default2.css" type="text/css">
         <link rel="stylesheet" href="../css/login_signup/logindiv_style2.css" type="text/css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script type>
-$(document).ready(function(){
-	
-	$(".open").on('click',function(){
-		$(".popup").show();
-		$(".dim").show();
-	});
-	$(".popup .close").on('click',function(){
-		$(this).parent().hide();
-		$(".dim").hide();
-	});
-});
-</script>
+        <link rel="stylesheet" href="../css/slide.css">
     </head>
 
     <body>
@@ -238,13 +225,22 @@ $(document).ready(function(){
                                 </div>
                             </div>
                         </div>
-                        <div class="hero__item set-bg" data-setbg="../img/hero/banner.jpg">
-                            <div class="hero__text">
-                                <span>신선한 밀키트</span>
-                                <h2>재료
-                                    <br/>100% 유기농</h2>
-                                <p>배달 가능</p>
-                                <a href="#" class="primary-btn">지금 주문하기</a>
+                            <div class="slideshow-container">
+
+                                <div class="mySlideDiv fade active">
+                                    <img src="../img/banner/banner_ad_1.jpg" alt="">
+                                </div>
+    
+                                <div class="mySlideDiv fade">
+                                    <img src="../img/banner/banner_ad_2.jpg" alt="">
+                                </div>
+    
+                                <div class="mySlideDiv fade">
+                                    <img src="../img/banner/banner_ad_3.jpg" alt="">
+                                </div>
+    
+                                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                                <a class="next" onclick="nextSlide()">&#10095;</a>
                             </div>
                         </div>
                     </div>
@@ -975,7 +971,20 @@ $(document).ready(function(){
         <script src="../js/mixitup.min.js"></script>
         <script src="../js/owl.carousel.min.js"></script>
         <script src="../js/main.js"></script>
-
+        <script src="../js/slide.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                $(".open").on('click',function(){
+                    $(".popup").show();
+                    $(".dim").show();
+                });
+                $(".popup .close").on('click',function(){
+                    $(this).parent().hide();
+                    $(".dim").hide();
+                });
+            });
+        </script>
     </body>
-
 </html>

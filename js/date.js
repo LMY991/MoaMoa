@@ -1,11 +1,10 @@
 $(function() {
-    $('.js_datepicker').datepicker({dateFormat: yyyy-mm-dd});
+    $('.js_datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 })
 
-let today = new Date('2022-05-16')	
-let newDay = new Date(today)	
-
 dateFormatter = function(newDay, today) {
+    var today = new Date('2020-05-16')	
+    var newDay = new Date(today)
     var year = newDay.getFullYear()
     var month = newDay.getMonth()+1
     var date = newDay.getDate()
@@ -29,14 +28,14 @@ dateFormatter = function(newDay, today) {
 document.getElementsByName("filterDate").forEach(e=> {
     e.addEventListener('click', function() {
         
-        var endDate = new Date($("#endDate").val())
-        var newDate = new Date($("#endDate").val())
+        let endDate = new Date($("#endDate").val())
+        let newDate = new Date($("#endDate").val())
 
         switch(this.value) {
             case '1':
-                console.log("일주일")
                 newDate.setDate(newDate.getDate() - 7)
                 newDate = dateFormatter(newDate)
+                console.log("일주일")
                 break;
             case '2':
                 newDate.setMonth(newDate.getMonth() - 3)
@@ -44,7 +43,7 @@ document.getElementsByName("filterDate").forEach(e=> {
                 console.log("3개월")
                 break;
             case '3':
-                newDate.setMonth(newDate.getDate() - 6)
+                newDate.setMonth(newDate.getMonth() - 6)
                 newDate = dateFormatter(newDate, endDate)
                 console.log("6개월")
                 break;
