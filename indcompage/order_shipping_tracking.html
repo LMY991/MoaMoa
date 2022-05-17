@@ -302,36 +302,29 @@
 
                                     <div class="mypage_lately_info">
                                         <div class="mypage_zone_tit">
-                                            <h3>주문목록/배송조회</h3>
+                                            <h3>주문/배송 조회</h3>
                                         </div>
 
                                         <div class="date_check_box">
-                                            <form method="get" name="frmDateSearch">
+                                            <form name="formSearch" id="formSearch" method="get">
                                                 <h3>
                                                     조회기간
                                                 </h3>
-                                                <div class="date_check_list" data-target-name="wDate[]">
-                                                    <button type="button" data-value="0">오늘</button>
-                                                    <button type="button" data-value="7">7일</button>
-                                                    <button type="button" data-value="15">15일</button>
-                                                    <button type="button" data-value="30">1개월</button>
-                                                    <button type="button" data-value="90">3개월</button>
-                                                    <button type="button" class="oneYear" data-value="365">1년</button>
+                                                <div class="date_check_list">
+                                                    <button type="button" name="filterDate" value="1">7일</button>
+                                                    <button type="button" name="filterDate" value="2">3개월</button>
+                                                    <button type="button" name="filterDate" value="3">6개월</button>
+                                                    <button type="button" name="filterDate" value="4">1년</button>
                                                 </div>
                                                 <!-- //date_check_list -->
                                                 <div class="date_check_calendar">
                                                     <input
-                                                        type="text"
-                                                        id="picker2"
-                                                        name="wDate[]"
-                                                        class="anniversary js_datepicker"
-                                                        value="2022-03-13">
+                                                        id="startDate"
+                                                        class="anniversary js_datepicker"/>
                                                     ~
                                                     <input
-                                                        type="text"
-                                                        name="wDate[]"
-                                                        class="anniversary js_datepicker"
-                                                        value="2022-03-20">
+                                                        id="endDate"
+                                                        class="anniversary js_datepicker"/>
                                                 </div>
                                                 <!-- //date_check_calendar -->
 
@@ -339,6 +332,7 @@
                                                     조회
                                                 </button>
                                             </form>
+
                                         </div>
                                         <!-- //date_check_box -->
 
@@ -395,6 +389,7 @@
                                             <script src="../js/mixitup.min.js"></script>
                                             <script src="../js/owl.carousel.min.js"></script>
                                             <script src="../js/main.js"></script>
+                                            <script src="../js/date.js"></script>
                                             <script>
                                                 if ($('.date_check_list').length) {
                                                     $('.date_check_list button').click(function (e) {
