@@ -293,39 +293,36 @@
                                     </div>
                                     <!-- 마이페이지 회원 요약정보 -->
                                     <div class="mypage_lately_info">
+                                        <div class="mypage_zone_tit">
+                                            <h3>쿠폰</h3>
+                                        </div>
+
                                         <div class="date_check_box">
-                                            <form name="frmCouponSearch" method="get">
-                                                <input type="hidden" name="memberCouponState" value="">
-                                                <input type="hidden" name="dateOpt" value="">
+                                            <form name="formSearch" id="formSearch" method="get">
                                                 <h3>
                                                     조회기간
                                                 </h3>
-                                                <div class="date_check_list" data-target-name="wDate[]">
-                                                    <button type="button" data-value="0">오늘</button>
-                                                    <button type="button" data-value="7">7일</button>
-                                                    <button type="button" data-value="15">15일</button>
-                                                    <button type="button" data-value="30">1개월</button>
-                                                    <button type="button" data-value="90">3개월</button>
-                                                    <button type="button" data-value="365">1년</button>
+                                                <div class="date_check_list">
+                                                    <button type="button" name="filterDate" value="1">7일</button>
+                                                    <button type="button" name="filterDate" value="2">3개월</button>
+                                                    <button type="button" name="filterDate" value="3">6개월</button>
+                                                    <button type="button" name="filterDate" value="4">1년</button>
                                                 </div>
                                                 <!-- //date_check_list -->
                                                 <div class="date_check_calendar">
                                                     <input
-                                                        type="text"
-                                                        id="picker2"
-                                                        name="wDate[]"
-                                                        class="anniversary js_datepicker"
-                                                        value="2022-03-21">
+                                                        id="startDate"
+                                                        class="anniversary js_datepicker"/>
                                                     ~
                                                     <input
-                                                        type="text"
-                                                        name="wDate[]"
-                                                        class="anniversary js_datepicker"
-                                                        value="2022-03-27">
+                                                        id="endDate"
+                                                        class="anniversary js_datepicker"/>
                                                 </div>
                                                 <!-- //date_check_calendar -->
 
-                                                <button type="submit" class="btn_date_check">조회</button>
+                                                <button type="submit" class="btn_date_check">
+                                                    조회
+                                                </button>
                                             </form>
 
                                         </div>
@@ -336,11 +333,11 @@
                                             <div class="mypage_breakdown_tab">
                                                 <ul>
                                                     <li class="on">
-                                                        <a href="../개인페이지/coupon.html" onclick="gd_coupon_state('y')">
+                                                        <a href="../indpage/coupon.html" onclick="gd_coupon_state('y')">
                                                             <span>사용가능</span></a>
                                                     </li>
                                                     <li >
-                                                        <a href="../개인페이지/couponX.html" onclick="gd_coupon_state('n')">
+                                                        <a href="../indpage/couponX.html" onclick="gd_coupon_state('n')">
                                                             <span>사용불가</span></a>
                                                     </li>
                                                 </ul>
@@ -407,6 +404,7 @@
                             <script src="../js/mixitup.min.js"></script>
                             <script src="../js/owl.carousel.min.js"></script>
                             <script src="../js/main.js"></script>
+                            <script src="../js/date.js"></script>
 
                         </body>
 

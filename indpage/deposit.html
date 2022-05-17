@@ -303,28 +303,21 @@
                                                 <h3>
                                                     조회기간
                                                 </h3>
-                                                <div class="date_check_list" data-target-name="regDt[]">
-                                                    <button type="button" data-value="0">오늘</button>
-                                                    <button type="button" data-value="7">7일</button>
-                                                    <button type="button" data-value="15">15일</button>
-                                                    <button type="button" data-value="30">1개월</button>
-                                                    <button type="button" data-value="90">3개월</button>
-                                                    <button type="button" data-value="365">1년</button>
+                                                <div class="date_check_list">
+                                                    <button type="button" name="filterDate" value="1">7일</button>
+                                                    <button type="button" name="filterDate" value="2">3개월</button>
+                                                    <button type="button" name="filterDate" value="3">6개월</button>
+                                                    <button type="button" name="filterDate" value="4">1년</button>
                                                 </div>
                                                 <!-- //date_check_list -->
                                                 <div class="date_check_calendar">
                                                     <input
-                                                        type="text"
-                                                        id="picker2"
-                                                        name="regDt[]"
-                                                        class="anniversary js_datepicker"
-                                                        value="2022-03-20">
+                                                        id="startDate"
+                                                        class="anniversary js_datepicker"/>
                                                     ~
                                                     <input
-                                                        type="text"
-                                                        name="regDt[]"
-                                                        class="anniversary js_datepicker"
-                                                        value="2022-03-27">
+                                                        id="endDate"
+                                                        class="anniversary js_datepicker"/>
                                                 </div>
                                                 <!-- //date_check_calendar -->
 
@@ -546,6 +539,7 @@
         <script src="../js/mixitup.min.js"></script>
         <script src="../js/owl.carousel.min.js"></script>
         <script src="../js/main.js"></script>
+        <script src="../js/date.js"></script>
 
     </body>
 
