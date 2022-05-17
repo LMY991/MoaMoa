@@ -297,24 +297,23 @@
                         <h2 class="subtitle" id="sub1"style="padding-top:100px !important; ">게시글쓰기</h2>
                         <hr>
                         <div>
-                            <form>
+                            <form action="../jsp/postWrite.jsp">
                                 <p>
                                     <strong>제목 : </strong>
-                                    <input type="text" placeholder="제목을 입력해주세요" style="width: 90%;">
+                                    <input type="text" name="title" id="title" placeholder="제목을 입력해주세요" style="width: 90%;">
                                 </p>
                                 <p>
                                     <strong>재료 : </strong>
-                                    <input type="text" placeholder="재료를 입력해주세요 (예 : 사과, 바나나)" style="width: 90%;">
+                                    <input type="text" name="ingredient" id="ingredient" placeholder="재료를 입력해주세요 (예 : 사과, 바나나)" style="width: 90%;">
                                 </p>
                                 <p>
                                     <strong>내용 : </strong>
-                                
-                                <textarea id="txtContent" rows="10" cols="100" style="width: 100%; height: 600px;"></textarea>
+                                <textarea id="txtContent" name="content" id="content" rows="10" cols="100" style="width: 100%; height: 600px;"></textarea>
                                 </p>
                                 <hr>
                                 <p>
                                     <strong>카테고리 : </strong>
-                                    <select>
+                                    <select name="category" id="category">
                                         <option>선택</option>
                                         <option>양식</option>
                                         <option>중식</option>
@@ -341,7 +340,7 @@
                                 </p>
                                 <hr>
                                 <input type="button" value="목록으로 돌아가기">
-                                <input type="button" value="글쓰기">
+                                <input type="submit" value="글쓰기">
                             </form>
                         </div>
                     </div>
@@ -349,9 +348,6 @@
                     </section>
                     <!-- Sctipt -->
                     <script src="../js/jquery-3.3.1.min.js"></script>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-                    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
                     <script src="../js/bootstrap.min.js"></script>
                     <script src="../js/jquery.nice-select.min.js"></script>
                     <script src="../js/jquery-ui.min.js"></script>
@@ -359,6 +355,24 @@
                     <script src="../js/mixitup.min.js"></script>
                     <script src="../js/owl.carousel.min.js"></script>
                     <script src="../js/main.js"></script>
-                    <script src="../js/date.js"></script>
+                    <script src="../js/jquery-1.11.3.min.js"></script>
+                    <script src="../js/jquery-ui.js"></script>
+                    <script src="../js/jquery.form.min.js"></script>
+                    <script type="text/javascript" src="../js/clipboard.js"></script>
+                    <script type="text/javascript" src="../js/swiper.min.js"></script>
+                    <script type="text/javascript" src="../js/click.min.js"></script>
+                    <script type="text/javascript" src="../js/ion.rangeSlider.js"></script>
+                    <script type="text/javascript" src="../js/jquery.countdown.min.js"></script>
+                    <script type="text/javascript" src="../js/cookie.js"></script>
+                    <script type="text/javascript" src="../js/script.js"></script>
+                    <script type="text/javascript" src="../js/custom.js"></script>
+                    <script type="text/javascript" src="../js/good.js"></script>
+                    <script type="text/javascript" src="../js/buy.js"></script>
+                    <script type="text/javascript" src="../js/member.js"></script>
+                    <script type="text/javascript" src="../js/order.js"></script>
+                    <script type="text/javascript" src="../js/site.js"></script>
+                    <script type="text/javascript" src="../js/giftCard.js"></script>
+                    <script type="text/javascript" src="../js/scm.js"></script>
+                    <script type="text/javascript" src="../js/review.js"></script>
                 </body>
             </html>
