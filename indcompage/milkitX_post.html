@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Recipe Moa Moa</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
+            rel="stylesheet">
 
         <!-- CSS Styles -->
         <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
@@ -18,7 +21,22 @@
 
         <link rel="stylesheet" href="https://use.typekit.net/puo4qmu.css">
         <link rel="stylesheet" href="../css/jquery-ui.css">
-        <link rel="stylesheet" href="../css/mypage/mypage.css">
+        <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/slick.css">
+        <link rel="stylesheet" type="text/css" href="../css/mypage.css">
+        <link rel="stylesheet" type="text/css" href="../css/ion.rangeSlider.css">
+        <link rel="stylesheet" type="text/css" href="../css/ion.rangeSlider.skinFlat.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style2.css">
+        <link rel="stylesheet" type="text/css" href="../css/custom.css">
+        <link rel="stylesheet" type="text/css" href="../css/board.css">
+        <link rel="stylesheet" type="text/css" href="../css/review.css">
+        <link rel="stylesheet" type="text/css" href="../css/flower.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/renew.css">
+        <!-- luna herina script start -->
         <script type="text/javascript">
             !function (h, e, a, r, i, n, c) {
                 c = function () {};
@@ -36,9 +54,21 @@
                 }
             }(window, document, 'script', '//cdn.hearina.com/js/luna_hearina_v.0.4.js');
         </script>
-        <script type="text/javascript" src="smarteditor2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
-        <!--스마트에디터-->
-        <script> $(() => { nhn.husky.EZCreator.createInIFrame({ oAppRef: editor, elPlaceHolder: 'txtContent', sSkinURI: '/plugin/smarteditor2/SmartEditor2Skin.html', fCreator: 'createSEditor2' }); }); </script>
+        <!--스타일 부분-->
+        <style> 
+            .profile_box{
+                width: 120px;
+                height: 120px;
+                border-radius: 70%;
+                overflow: hidden;
+                margin: 10px;
+            }
+            .profile{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
     </head>
     <body>
         <div class="humberger__menu__overlay"></div>
@@ -286,46 +316,134 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <h2 class="subtitle" id="sub1"style="padding-top:100px !important; ">게시글쓰기</h2>
-                        <hr>
-                        <div>
-                            <form action="../jsp/postWrite.jsp">
-                                <p>
-                                    <strong>제목 : </strong>
-                                    <input type="text" name="title" id="title" placeholder="제목을 입력해주세요" style="width: 90%;">
-                                </p>
-                                <p>
-                                    <strong>재료 : </strong>
-                                    <input type="text" name="ingredient" id="ingredient" placeholder="재료를 입력해주세요 (예 : 사과, 바나나)" style="width: 90%;">
-                                </p>
-                                <p>
-                                    <strong>내용 : </strong>
-                                <textarea id="txtContent" name="content" id="content" rows="10" cols="100" style="width: 100%; height: 600px;"></textarea>
-                                </p>
+                    <!-- Blog Details Section Begin -->
+                    <section class="blog-details spad">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-5 order-md-1 order-2">
+                                    <div class="blog__sidebar">
+                                        <div class="blog__sidebar__search">
+                                            <form action="#">
+                                                <input type="text" placeholder="Search...">
+                                                <button type="submit"><span class="icon_search"></span></button>
+                                            </form>
+                                        </div>
+                                        <div class="blog__sidebar__item">
+                                            <h4>최근 글</h4>
+                                            <div class="blog__sidebar__recent">
+                                                <a href="#" class="blog__sidebar__recent__item">
+                                                    <div class="blog__sidebar__recent__item__pic">
+                                                        <img src="../img/milkitX/new_1.jpg" alt="" width="150px" height="100">
+                                                    </div>
+                                                    <div class="blog__sidebar__recent__item__text">
+                                                        <h6>멜로망스</h6>
+                                                        <span>2022-05-17</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="blog__sidebar__recent__item">
+                                                    <div class="blog__sidebar__recent__item__pic">
+                                                        <img src="../img/milkitX/new_2.jpg" alt="" width="150px">
+                                                    </div>
+                                                    <div class="blog__sidebar__recent__item__text">
+                                                        <h6>엑소<br />백현</h6>
+                                                        <span>2022-05-17</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="blog__sidebar__recent__item">
+                                                    <div class="blog__sidebar__recent__item__pic">
+                                                        <img src="../img/milkitX/new_3.jpg" alt="" width="150px">
+                                                    </div>
+                                                    <div class="blog__sidebar__recent__item__text">
+                                                        <h6>비투비</h6>
+                                                        <span>2022-05-17</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="blog__sidebar__item">
+                                            <h4>해시태그</h4>
+                                            <div class="blog__sidebar__item__tags">
+                                                <a href="#">TMI</a>
+                                                <a href="#">하루일기</a>
+                                                <a href="#">인사말</a>
+                                                <a href="#">오늘하루후기</a>
+                                                <a href="#">음식후기</a>
+                                                <a href="#">오늘먹은 음식</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-7 order-md-1 order-1">
+                                    <div class="blog__details__text">
+                                        <img src="../img/blog/details/details-pic2.jpeg" alt="" width="1000px" height="500px">
+                                        <h3>제주도 여행</h3>
+                                        <p>제주도 여행 굳굳</p>
+                                    </div>
+                                    <div class="blog__details__content">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="blog__details__author">
+                                                    <div class="blog__details__author__pic">
+                                                        <img src="../img/blog/details/details-author.jpg" alt="">
+                                                    </div>
+                                                    <div class="blog__details__author__text">
+                                                        <h6>사용자1</h6>
+                                                        <span>사용자</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="blog__details__widget">
+                                                    <ul>
+                                                        <li><span>카테고리:</span> 양식</li>
+                                                        <li><span>해시태그:</span> #피자, #굳굳</li>
+                                                    </ul>
+                                                    <div class="blog__details__social">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a href="#"><i class="fa fa-envelope"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                            <div>
+                                <div>
+                                    <p>댓글 작성</p>
+                                    <textarea rows="2" placeholder="내용을 입력해주세요" style="width: 500%;"></textarea>
+                                    <span>
+                                        <input type="button" value="완료">
+                                    </span>
+                                </div>
+                                <br>
+                                <div>
+                                    <div>
+                                        <div style="float: right;">
+                                            내용
+                                        </div>
+                                        <div>간단자취러</div>
+                                        <div style="font-size: 10px;">2022.3.20. 19:00</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div style="float: right;">
+                                            내용
+                                        </div>
+                                        <div>간단자취러</div>
+                                        <div style="font-size: 10px;">2022.3.20. 19:00</div>
+                                    </div>  
+                                </div>
                                 <hr>
-                                <p>
-                                    <strong>카테고리 : </strong>
-                                    <input type="text" name="ingredient" id="ingredient" placeholder="ex)한식, 양식, 중식, 일식 등" style="width: 30%;">
-                                </p>
-                                <p>
-                                    <strong>해시태그 : </strong>
-                                    <input type="text" placeholder="해시태그를 입력하세요" style="width: 30%;">
-                                    <input type="button" value="등록">
-                                </p>
-                                <p>
-                                    <strong>첨부파일 : </strong>
-                                    <input type="file" id="file">
-                                </p>
-                                <p>
-                                    <strong>링크 : </strong>
-                                    <input type="text" placeholder="링크를 입력하세요" style="width: 30%;">
-                                    <input type="button" value="등록">
-                                </p>
-                                <hr>
-                                <a href="milkit_post_list.html"><input type="button" value="목록으로 돌아가기"></a>
-                                <input type="submit" value="글쓰기">
-                            </form>
+                                <a href="../indcompage/milkitX_post_list.html"><input type="button" value="목록으로"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
