@@ -61,14 +61,6 @@
                                         <p class="preview-subject ellipsis mb-1 text-small">프로필 변경</p>
                                     </div>
                                 </a>
-                                <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
-                                            <i class="mdi mdi-calendar-today text-success"></i>
-                                        </div>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                     </li>
@@ -295,32 +287,12 @@
                 <!-- partial -->
                 <div class="main-panel">
                     <div class="content-wrapper">
-                        <div class="page-header">
-                            <h3 class="page-title">
-                                공지 관리
-                            </h3>
-                            <button type="button" class="btn btn-outline-success btn-fw">공지 쓰기</button>
-                        </div>
                         <div class="row">
                             <div class="col-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="dropdown">
                                             <div class="form-check form-check-primary">
-                                                <button
-                                                    class="btn btn-outline-success dropdown-toggle"
-                                                    type="button"
-                                                    id="dropdownMenuOutlineButton5"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    변경
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuOutlineButton5">
-                                                    <h6 class="dropdown-header">상태 변경</h6>
-                                                    <a class="dropdown-item" href="#">공개</a>
-                                                    <a class="dropdown-item" href="#">비공개</a>
-                                                </div>
                                                 <div class="row ">
                                                     <div class="col-12 grid-margin">
                                                         <div class="card">
@@ -329,56 +301,54 @@
                                                                     <table class="table">
                                                                         <thead>
                                                                             <tr>
-                                                                                <th>
-                                                                                    <div class="form-check form-check-muted m-0">
-                                                                                        <label class="form-check-label">
-                                                                                            <input type="checkbox" class="form-check-input">
-                                                                                        </label>
-                                                                                    </div>
-                                                                                </th>
-                                                                                <th>
-                                                                                    운영자 이름
-                                                                                </th>
-                                                                                <th>
-                                                                                    내용
-                                                                                </th>
-                                                                                <th>
-                                                                                    쓴 날짜
-                                                                                </th>
-                                                                                <th>
-                                                                                    수정
-                                                                                </th>
+                                                                                <td>
+                                                                                    프로필 이미지
+                                                                                </td>
+                                                                                <td>                                                                                    
+                                                                                    <img src="assets/images/faces/mychar.png" alt="image"/>
+                                                                                    &nbsp;<button type="button" class="btn btn-outline-primary btn-fw" style="width: 25px;">
+                                                                                        사진 변경
+                                                                                     </button>
+                                                                                </td>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <div class="form-check form-check-muted m-0">
-                                                                                        <label class="form-check-label">
-                                                                                            <input type="checkbox" class="form-check-input">
-                                                                                        </label>
-                                                                                    </div>
+                                                                                    이름
                                                                                 </td>
                                                                                 <td>
-                                                                                    <img src="assets/images/faces/mychar.png" alt="image"/>
-                                                                                    <span class="pl-2">장채윤</span>
+                                                                                    <input type="text" class="form-control" placeholder="장채윤">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    비밀번호
                                                                                 </td>
                                                                                 <td>
-                                                                                    안녕하세요!!!
+                                                                                    <input type="password" class="form-control" placeholder="비밀번호">
                                                                                 </td>
-                                                                                <td>2022-04-28</td>
+                                                                            </tr>
+                                                                            <tr>
                                                                                 <td>
-                                                                                    <button type="button" class="btn btn-outline-primary btn-fw">
-                                                                                        수정
-                                                                                    </button>
+                                                                                    비밀번호 확인
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="password" class="form-control" placeholder="비밀번호 확인">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    전화번호
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" class="form-control" placeholder="전화번호">
                                                                                 </td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
                                                                     <div class="btn-modify_delete" style="float: right;">
-                                                                        <button type="button" class="btn btn-outline-danger btn-fw">
-                                                                            삭제
-                                                                        </button>
+                                                                        <button type="button" class="btn btn-outline-success btn-fw">변경</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
